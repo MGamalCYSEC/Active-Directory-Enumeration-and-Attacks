@@ -18,10 +18,12 @@ From PowerShell with `valid member of the Local Administrator group` for the tar
 - **/password:** The corresponding password for authentication.
 - **process call create:** Instructs WMIC to create (execute) a new process on the target.
 - **"<COMMAND>":** The command or application to be executed remotely (e.g., `"calc"` for the calculator).
-_Example:_ 
- ``` powershell
+Example:
+
+``` powershell
  wmic /node:192.168.50.73 /user:jen /password:Nexus123! process call create "calc"
 ```
+
 - A `ReturnValue` of "0", meaning that the process has been created successfully.
 - **PowerShell (Modern Approach)**:  
 Steps:
