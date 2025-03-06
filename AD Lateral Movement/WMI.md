@@ -48,7 +48,7 @@ Steps:
 - Requires **local admin** privileges on the target.  
 - Processes spawn in **Session 0** (non-interactive). Use `-RunAs` or migrate to user sessions for GUI access.  
 - UAC bypassed for **domain admins** on domain-joined machines.  
-#### We can replace `$Command` with Encoded shell from [PowerShell_RCE](https://github.com/MGamalCYSEC/ReverseShellCrafter/tree/main/PowerShell)
-Encoded shell
+#### We can replace `$Command` with **Encoded** shell from [PowerShell_RCE](https://github.com/MGamalCYSEC/ReverseShellCrafter/tree/main/PowerShell)
+
 
 
