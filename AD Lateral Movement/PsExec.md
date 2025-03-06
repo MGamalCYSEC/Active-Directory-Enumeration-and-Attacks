@@ -5,6 +5,17 @@ Here's a concise PsExec cheat sheet tailored for offensive security operations:
 
 ### **PsExec Cheat Sheet**  
 *For remote command execution and lateral movement via SMB*
+### **Prerequisites**  
+
+1. **Administrative Privileges**:  
+   - The user authenticating to the target machine must be a member of the **Local Administrators group** on the target system.  
+1. **ADMIN$ Share Availability**:  
+   - The **ADMIN$** share (a hidden administrative share) must be accessible on the target machine.  
+   - By default, this share is enabled on modern Windows systems and provides access to the `C:\Windows` directory.  
+
+3. **File and Printer Sharing Enabled**:  
+   - The **File and Printer Sharing** feature must be turned on.  
+   - This is typically enabled by default on modern Windows Server systems and allows remote access to shared resources.  
 
 ---
 
