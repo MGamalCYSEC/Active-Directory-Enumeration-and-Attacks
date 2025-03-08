@@ -6,11 +6,11 @@
 - **MITRE Framework**: Mapped under [TA0008 - Lateral Movement](https://attack.mitre.org/tactics/TA0008/).  
 - **Key Goal**: Move from a compromised system to other systems/services to escalate privileges or access sensitive data.  
 
----
+
 
 ## **2. Method-Specific Prerequisites**  
 
----
+
 
 ### **2.1 [WMI (Windows Management Instrumentation)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/WMI.md)**  
 **Use Case**: Remote process execution, system management.  
@@ -25,7 +25,7 @@
 4. **Session 0 Execution**:  
    - Processes spawn in non-interactive sessions. Use `-RunAs` for GUI access.  
 
----
+
 
 ### **2.2 [WinRM (Windows Remote Management)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/WinRM.md)**  
 **Use Case**: PowerShell remoting, command execution.  
@@ -38,7 +38,7 @@
 3. **Port Access**:  
    - **5985/TCP (HTTP)** or **5986/TCP (HTTPS)** open.  
 
----
+
 
 ### **2.3 [PsExec](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/PsExec.md)**  
 **Use Case**: Remote command execution via SMB.  
@@ -51,7 +51,7 @@
 3. **ADMIN$ Share**:  
    - Accessible (default enabled).  
 
----
+
 
 ### **2.4 [Pass the Hash (PtH)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/Pass%20the%20Hash%20(PtH).md)**  
 **Use Case**: Authenticate using NTLM hashes instead of plaintext passwords.  
@@ -64,7 +64,7 @@
 3. **ADMIN$ Share**:  
    - Accessible.  
 
----
+
 
 ### **2.5 [Overpass the Hash (OtH)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/Overpass%20the%20Hash.md)**  
 **Use Case**: Convert NTLM hash to Kerberos TGT for stealthy access.  
@@ -77,7 +77,7 @@
 3. **Local Admin Rights**:  
    - Required to dump LSASS memory for hashes.  
 
----
+
 
 ### **2.6 [Pass the Ticket (PtT)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/Pass%20the%20Ticket.md)**  
 **Use Case**: Steal/reuse Kerberos TGS tickets.  
@@ -90,7 +90,7 @@
 1. **No Admin for Injection (Self-Injection Exception)** :  
    - Tickets can be injected into your own session without privileges.  
 
----
+
 
 ### **2.7 [DCOM (Distributed Component Object Model)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/DCOM.md)**  
 **Use Case**: Remote code execution via COM objects.  
