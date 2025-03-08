@@ -115,13 +115,13 @@ Here’s a structured, organized document outlining **Lateral Movement Technique
 
 | **Method**            | **Key Prerequisites**                      | **Tools**              |
 | --------------------- | ------------------------------------------ | ---------------------- |
-| **WMI**               | Local admin, ADMIN$ share, SMB access      | `wmic`, Impacket       |
-| **WinRM**             | WinRM enabled, port 5985/5986              | Evil-WinRM, PowerShell |
-| **PsExec**            | Local admin, SMB port 445, ADMIN$ share    | Sysinternals PsExec    |
-| **Pass the Hash**     | SMB access, local admin (for non-built-in) | Mimikatz, CrackMapExec |
-| **Overpass the Hash** | Cached NTLM hash, Kerberos enabled         | Mimikatz, Rubeus       |
-| **Pass the Ticket**   | Valid TGS ticket, LSASS access (optional)  | Mimikatz, Rubeus       |
-| **DCOM**              | Local admin, RPC port 135, DCOM enabled    | PowerShell, Impacket   |
+| **[WMI](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/WMI.md)**               | Local admin, ADMIN$ share, SMB access      | `wmic`, Impacket       |
+| **[WinRM](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/WinRM.md)**             | WinRM enabled, port 5985/5986              | Evil-WinRM, PowerShell |
+| **[PsExec](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/PsExec.md)**            | Local admin, SMB port 445, ADMIN$ share    | Sysinternals PsExec    |
+| **[Pass the Hash](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/Pass%20the%20Hash%20(PtH).md)**     | SMB access, local admin (for non-built-in) | Mimikatz, CrackMapExec |
+| **[Overpass the Hash](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/Overpass%20the%20Hash.md)** | Cached NTLM hash, Kerberos enabled         | Mimikatz, Rubeus       |
+| **[Pass the Ticket](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/Pass%20the%20Ticket.md)**   | Valid TGS ticket, LSASS access (optional)  | Mimikatz, Rubeus       |
+| **[DCOM](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Lateral%20Movement/DCOM.md)**              | Local admin, RPC port 135, DCOM enabled    | PowerShell, Impacket   |
 
 ---
 
