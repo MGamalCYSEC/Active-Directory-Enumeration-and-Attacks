@@ -1,11 +1,5 @@
-Here’s a structured, organized document outlining **Lateral Movement Techniques** and their **Conditions for Success**:
-
----
-
 # **Lateral Movement Methods**  
-*Organized by technique, conditions, and practical use cases*  
 
----
 
 ## **1. Overview**  
 **Lateral Movement** refers to techniques attackers use to expand access within a network after initial compromise. These methods often exploit valid accounts, stolen credentials (hashes, Kerberos tickets), or system vulnerabilities.  
