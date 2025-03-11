@@ -1,6 +1,6 @@
 # Active Directory Persistence
 Active Directory environments are often targeted by adversaries looking to maintain long-term persistence within a network. Two prominent techniques for achieving this are Golden Ticket attacks and abuse of the Shadow Copy Service (VSS). This repository provide a Step-by-Step Exploitation for each.
-## 1. Golden Ticket Attack
+## 1. [Golden Ticket Attack](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Persistence/Golden%20Ticket%20Attack.md)
 The core of the Golden Ticket attack lies in the manipulation of the Ticket Granting Ticket (TGT)—a credential encrypted using a secret key associated with the krbtgt account. By compromising this account, attackers can forge their own TGTs, known as Golden Tickets. This allows them to impersonate any user, including Domain Administrators, effectively granting unfettered access to all domain resources.
 
 #### Prerequisites:
