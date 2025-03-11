@@ -7,7 +7,7 @@ The core of the Golden Ticket attack lies in the manipulation of the Ticket Gran
 - **krbtgt Hash**: Extraction of the NTLM hash for the krbtgt account is essential. This step typically requires Domain Admin privileges or an outright compromise of a Domain Controller.
 - **Domain SID**: The unique Security Identifier of the domain (e.g., S-1-5-21-1987370270-658905905-1781884369) must be obtained.
 - **Mimikatz Access**: Tools like Mimikatz are used on domain-joined systems to generate and inject the forged tickets without needing elevated privileges for ticket injection.
-## 2. [Shadow Copy (VSS) Abuse](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Persistence/Shadow%20Copies.md))
+## 2. [Shadow Copy (VSS) Abuse](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks-/blob/main/AD%20Persistence/Shadow%20Copies.md)
 Shadow Copy Service (VSS) is a built-in Microsoft feature designed to create point-in-time snapshots of files or volumes—even while they are in use—to facilitate backups and data recovery. However, attackers can exploit VSS to access sensitive files, such as the NTDS.dit (Active Directory database), and the SYSTEM hive, which holds the boot key necessary for decrypting the NTDS.dit.
 
 #### Prerequisites:
