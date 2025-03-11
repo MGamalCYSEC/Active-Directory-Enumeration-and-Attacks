@@ -1,3 +1,0 @@
-# Golden Ticket
-
-# Shadow Copies
