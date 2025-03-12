@@ -11,7 +11,7 @@ Import-Module .\Sharphound.ps1
 Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\temp\ -OutputPrefix "corp audit"
 ```
 #### CollectionMethods
-![[Pasted image 20241225121647.png]]
+![Pasted image](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Pasted%20image%2020241225121647.png)
 ##### The Session Loop Collection Method
 ``` powershell
 SharpHound.exe --CollectionMethods Session --Loop
