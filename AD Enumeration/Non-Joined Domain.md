@@ -158,7 +158,28 @@ net use \\DC01\ipc$ "password" /u:guest
     - _Note_: Modern Windows Server versions restrict LDAP binds to authenticated users.
 ### Enumerating via LDAP Tools
 - **Using ldapsearch**:
+- Basic enumeration on null session
+``` shell
+ldapsearch -x -H ldap://<LDAP_SERVER_IP> -D '' -w '' -b "DC=hutch,DC=LOCAL"
+```
+- password policy
 ```bash
-ldapsearch -H 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "*" | grep -m 1 -B 10 pwdHistoryLength
+ldapsearch -H <LDAP_SERVER_IP> -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "*" | grep -m 1 -B 10 pwdHistoryLength
 ```
 - **Expected Output**: Domain password policy details (e.g., minimum password length, lockout threshold, and complexity requirements).
+
+- **List Users**:
+    ```bash
+    ldapsearch -x -H ldap://<LDAP_SERVER_IP> -D '' -w '' -b "<BASE_DN>" "(objectClass=user)"
+    ```
+- **List Groups**:
+    ```bash
+    ldapsearch -x -H ldap://<LDAP_SERVER_IP> -D '' -w '' -b "<BASE_DN>" "(objectClass=group)"
+    ```
+- **List Computers**:
+    ```bash
+    ldapsearch -x -H ldap://<LDAP_SERVER_IP> -D '' -w '' -b "<BASE_DN>" "(objectClass=computer)"
+    ```
+- Replace `<LDAP_SERVER_IP>` with the LDAP server's IP or hostname.
+- Replace `<BASE_DN>` with the Base DN, e.g., `DC=example,DC=com`.
+    
