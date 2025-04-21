@@ -10,4 +10,4 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
 
 ---
 # 2. Active Directory Attacks
-
+- 2.1. Cashed AD Credentials
