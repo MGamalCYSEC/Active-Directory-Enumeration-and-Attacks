@@ -71,7 +71,6 @@ To invoke the _Domain Class_ and the _GetCurrentDomain_ method, we'll run the fo
 ``` powershell
 [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
 ```
-![[Pasted image 20241218201116.png]]
 #### Using ADSI to obtain the DN for the domain
 ``` powershell
 ([adsi]'').distinguishedName
