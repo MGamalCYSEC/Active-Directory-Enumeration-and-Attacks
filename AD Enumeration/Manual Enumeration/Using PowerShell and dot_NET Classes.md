@@ -189,69 +189,7 @@ Foreach($obj in $result)
 }
 ```
 
-#### Encapsulate the current functionality of the script into an actual function.
-Save it with name `function.ps1`
-``` powershell
-function LDAPSearch {
-    param (
-        [string]$LDAPQuery
-    )
 
-    $PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
-    $DistinguishedName = ([adsi]'').distinguishedName
-
-    $DirectoryEntry = New-Object System.DirectoryServices.DirectoryEntry("LDAP://$PDC/$DistinguishedName")
-
-    $DirectorySearcher = New-Object System.DirectoryServices.DirectorySearcher($DirectoryEntry, $LDAPQuery)
-
-    return $DirectorySearcher.FindAll()
-
-}
-```
-use the function, let's import it to memory:
-``` powershell
-Import-Module .\function.ps1
-```
-#### Filter on the specific _samAccountType_:
-``` powershell
-LDAPSearch -LDAPQuery "(samAccountType=805306368)"
-```
-#### Use **objectClass=group** in this case to list all the groups in the domain:
-``` powershell
-LDAPSearch -LDAPQuery "(objectclass=group)"
-```
----
-Our script enumerates more groups than net.exe including _Print Operators_, _IIS_IUSRS_, and others. This is because it enumerates all AD objects including _Domain Local_ groups (not just global groups).
-
-To enumerate every group available in the domain and also display the user members After importing the module `function.ps1` 
-This allows us to select specific attributes we are interested in. For example, let's focus on the _CN_ and _member_ attributes:
-``` powershell
-foreach ($group in $(LDAPSearch -LDAPQuery "(objectCategory=group)")) {$group.properties | select {$_.cn}, {$_.member}}
-```
-Since the output can be somewhat difficult to read, let's once again search for the groups, but this time specify the _Sales Department_ in the query and pipe it into a variable in our PowerShell command line:
-``` powershell
-$sales = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn=Sales Department))"
-```
-
-``` powershell
-$sales.properties.member
-```
-Now that we know the _Development Department_ is a member of the _Sales Department_, let's enumerate it:
-``` powershell
-$group = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn=Development Department*))"
-```
-
-``` powershell
-$group.properties.member
-```
-Based on the output above, we have another case of a nested group since _Management Department_ is a member of _Development Department_. Let's check this group as well:
-``` powershell
-$group = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn=Management Department*))"
-```
-
-``` powershell
-$group.properties.member
-```
 ---
 ## AD Enumeration with **PowerView.ps1
 
