@@ -264,15 +264,12 @@ In order to view the permissions, we'll use the PowerShell [**Get-Acl**](https:
 ``` powershell
 Get-Acl -Path HKLM:SYSTEM\CurrentControlSet\Services\LanmanServer\DefaultSecurity\ | fl
 ```
-![[Pasted image 20241222154625.png]]
-
 The groups and users that have either _FullControl_ or _ReadKey_, meaning they can all read the **SrvsvcSessionInfo** key itself.
 
 However, the _BUILTIN_ group, _NT AUTHORITY_ group, _CREATOR OWNER_ and _APPLICATION PACKAGE AUTHORITY_ are defined by the system, and do not allow _NetSessionEnum_ to enumerate this registry key from a remote standpoint.
 
 ---
----
----
+
 # Summary 
 ## A total Enum Script module:
 
