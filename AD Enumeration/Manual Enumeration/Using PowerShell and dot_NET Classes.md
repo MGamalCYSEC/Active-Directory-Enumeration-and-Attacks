@@ -8,7 +8,6 @@ LDAP://HostName[:PortNumber][/DistinguishedName]
 A full LDAP path requires three key parameters:
 
 1. **HostName**:
-    
     - Can be a computer name, IP address, or domain name.
     - Example: For the domain `corp.com`, the HostName could be `corp.com`. However, domains often have multiple Domain Controllers (DCs), and resolving the domain name might point to any DC in the domain.
     - Optimal enumeration requires identifying the [_Primary Domain Controller_](https://learn.microsoft.com/en-GB/troubleshoot/windows-server/identity/fsmo-roles) (PDC), which holds the most updated information.
