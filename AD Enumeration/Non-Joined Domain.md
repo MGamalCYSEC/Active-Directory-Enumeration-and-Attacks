@@ -49,7 +49,7 @@ When scanning your target Domain Controller, focus on these ports to detect serv
 
 ---
 
-## 3. User Enumeration with [Kerbrute]([Releases · ropnop/kerbrute](https://github.com/ropnop/kerbrute/releases))
+## 3. User Enumeration with [Kerbrute](https://github.com/ropnop/kerbrute/releases)
 
 **Kerbrute** helps identify valid AD usernames and exposes misconfigurations.
 
