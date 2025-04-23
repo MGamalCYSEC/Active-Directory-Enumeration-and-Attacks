@@ -29,3 +29,5 @@ By using use [Rubeus]([https://github.com/GhostPack/Rubeus](https://github.com/M
 ``` powershell
 .\Rubeus.exe kerberoast /outfile:hashes.kerberoast
 ```
+On BloodHound we notice it as:
+![image](https://github.com/user-attachments/assets/1d4eab33-897d-44a5-b4d3-68aee8275292)
