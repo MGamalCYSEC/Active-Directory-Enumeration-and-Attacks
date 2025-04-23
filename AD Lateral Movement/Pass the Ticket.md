@@ -1,4 +1,4 @@
-# **Pass the Ticket (PtT) Cheat Sheet**  
+# **Pass the Ticket (PtT)**  
 *Steal and reuse Kerberos TGS tickets for lateral movement.*  
 
 ---
