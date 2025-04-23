@@ -24,6 +24,7 @@ First, we run the PowerView `Get-DomainUser` command with the `-PreauthNotRequir
 Get-DomainUser -PreauthNotRequired
 ```
 By using use _Rubeus_,[4](https://github.com/GhostPack/Rubeus)
+Compiled Version [->](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Tools)
 
 ``` powershell
 .\Rubeus.exe asreproast /nowrap
