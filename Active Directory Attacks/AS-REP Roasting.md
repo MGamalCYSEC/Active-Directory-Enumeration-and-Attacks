@@ -29,6 +29,8 @@ Compiled Version [->](https://github.com/MGamalCYSEC/Active-Directory-Enumeratio
 ``` powershell
 .\Rubeus.exe asreproast /nowrap
 ```
+On BloodHound we Discover it as:
+![image](https://github.com/user-attachments/assets/aab7c819-2b90-464d-af8e-7b947d8cd596)
 
 
 
