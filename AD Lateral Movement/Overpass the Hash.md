@@ -1,8 +1,4 @@
-Here's a concise **Overpass the Hash (OtH) Cheat Sheet** with conditions for success, examples, and key details:
-
----
-
-### **Overpass the Hash (OtH) Cheat Sheet**  
+### **Overpass the Hash (OtH)**  
 *Convert NTLM hashes to Kerberos tickets for stealthy lateral movement.*  
 
 ---
