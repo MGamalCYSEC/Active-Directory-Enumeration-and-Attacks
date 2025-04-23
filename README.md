@@ -13,4 +13,5 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
 - 2.1. Cashed AD Credentials
 - 2.2. [AD Password Attacks](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/AD%20Password%20Attacks.md)
 - 2.3. [AS-REP Roasting](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/AS-REP%20Roasting.md)
+  DONT_REQ_PREAUTH Appears from `Get-DomainUser -PreauthNotRequired` on powerview
 - 
