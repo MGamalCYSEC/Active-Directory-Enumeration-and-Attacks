@@ -123,4 +123,26 @@ Get-DomainPolicy
    $group = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn=Management Department*))"
    $group.properties.member
    ```
+### **Active Directory Enumeration Using PowerView**
 
+#### **List All Users in the Domain**
+```powershell
+Get-NetUser
+```
+
+#### **Query Users with Specific Attributes**
+1. **Retrieve User Common Names (CN):**
+   ```powershell
+   Get-NetUser | select cn
+   ```
+
+2. **Display Users with Password Last Set and Last Logon Information:**
+   ```powershell
+   Get-NetUser | select cn, pwdlastset, lastlogon
+   ```
+
+#### **Filter for a Specific User**
+- **Filter by `SamAccountName`:**
+  ```powershell
+  Get-NetUser | Where-Object { $_.SamAccountName -eq "UserName" }
+  ```
