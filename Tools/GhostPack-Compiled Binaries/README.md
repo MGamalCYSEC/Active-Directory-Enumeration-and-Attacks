@@ -1,1 +1,1 @@
-Compiled binaries for GhostPack authored by @harmj0y
+Compiled binaries for [GhostPack](https://github.com/GhostPack) 
