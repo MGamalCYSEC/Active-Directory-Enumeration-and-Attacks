@@ -16,6 +16,7 @@
      ```powershell
      $NewPassword = ConvertTo-SecureString '<NEW_PASSWORD>' -AsPlainText -Force
      ```  
+---
 
 3. **Reset the Target User's Password**  
    - **Import Required Modules** (e.g., PowerView):  
