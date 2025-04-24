@@ -1,6 +1,6 @@
-Change a User's Password Using ACL Permissions
+# Change a User's Password Using ACL Permissions
 
-1. **Authenticate as the Controlling User**  
+1. **Authenticate as the Controlling User User I have**  
    - **Create a Secure String** for the password of the user with ACL permissions (e.g., `ali`):  
      ```powershell
      $SecPassword = ConvertTo-SecureString '<PASSWORD>' -AsPlainText -Force
