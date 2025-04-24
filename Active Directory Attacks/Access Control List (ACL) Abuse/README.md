@@ -23,4 +23,3 @@ The following table should help for better understanding of the ACE types and wh
 | **Self-Membership**           | bf9679c0-0de6-11d0-a285-00aa003049e2  | Validate Write                     | Edit the "member" attribute of the object.                                                                                                                  |
 | **Validated-SPN**             | f3a64788-5306-11d1-a9c5-0000f80367c1  | Validate Write                     | Edit the "servicePrincipalName" attribute of the object.                                                                                                    |
 
-Let me know if you need further adjustments!
