@@ -1,5 +1,5 @@
 # GenericWrite
-## On a `Group` Object AddMember
+## On a `Group` Object `AddMember`
 
 1. **Authenticate as the Compromised User**:  
    - Create a `PSCredential` object for the user with group modification rights:  
