@@ -1,9 +1,7 @@
 Access control lists are checked to determine permissions, These can be enumerated (and visualized) using a tool such as **BloodHound**, and are all abusable with **PowerView**, among other tools: 
- 1. [ForceChangePassword](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html#forcechangepassword) : gives us the right to reset a user's password without first knowing their password (should be used cautiously and typically best to consult our client before resetting passwords).
- 2. [GenericWrite](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html#genericwrite): gives us the right to **write to any non-protected attribute on an object**. If we have this access over a user, we could assign them an SPN and perform a _Kerberoasting_ attack (which relies on the target account having a weak password set). Over a group means we could add ourselves or another security principal to a given group. Finally, if we have this access over a computer object, we could perform a resource-based constrained delegation attack
- 3. `AddSelf` - shows security groups that a user can add themselves to.
- 4.  [GenericAll](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html#genericall): this grants us full control over a target object. Again, depending on if this is granted over a user or group, we could modify group membership, force change a password, or perform a targeted _Kerberoasting_ attack. If we have this access over a computer object and the [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/en-us/download/details.aspx?id=46899) is in use in the environment, we can read the LAPS password and gain local admin access to the machine which may aid us in lateral movement or privilege escalation in the domain if we can obtain privileged controls or gain some sort of privileged access.
- 5.  
+A graphic created by [Charlie Bromberg (Shutdown)](https://twitter.com/_nwodtuhs), shows an excellent breakdown of the varying possible ACE attacks and the tools to perform these attacks from both Windows and Linux (if applicable). 
+![DACL abuse mindmap CnS4bNaY](https://github.com/user-attachments/assets/dd684644-35cb-4613-b9ce-d32aa48847d5)
+
 
 The following table should help for better understanding of the ACE types and what they allow.
 
