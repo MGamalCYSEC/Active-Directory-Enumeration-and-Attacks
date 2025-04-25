@@ -52,7 +52,7 @@ There are several ways to abuse the ability to read the Group Managed Service Ac
 #### **Option 1: Create a New Session**
 1. Start a new session:
    ```powershell
-   $session = New-PSSession -ComputerName 192.168.50.73 -Credential $cred
+   $session = New-PSSession -ComputerName 127.0.0.1 -Credential $cred
    ```
 
 2. Enter the session:
