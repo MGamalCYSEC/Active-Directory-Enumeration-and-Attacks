@@ -31,7 +31,7 @@
 ---
 Another way to **Reset the Target User's Password** if powerview.ps1 cannot be executed (AV)
 Set-ADAccountPassword (ActiveDirectory module)
-# Example: Reset a user password to “p@ssw0rd” (Microsoft docs example)&#8203;:contentReference[oaicite:5]{index=5}
+# Example: Reset a user password to “p@ssw0rd”
 ``` powershell
 Set-ADAccountPassword -Identity 'CN=Elisa Daugherty,OU=Accounts,DC=Fabrikam,DC=com' `
     -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "p@ssw0rd" -Force)
