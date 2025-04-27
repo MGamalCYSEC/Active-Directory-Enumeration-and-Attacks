@@ -45,7 +45,7 @@ Prepare a script to perform the desired action. Save it in a location accessible
     ```cmd
     echo "dir C:\Users\Alice\Desktop > C:\Temp\output.txt" > \\temp\\payload.ps1
     ```
-  #### 2. **Set the `scriptPath` Attribute**
+#### 2. **Set the `scriptPath` Attribute**
 
 - Use PowerView or another AD tool to modify the `scriptPath` of the target user object.
 
