@@ -74,6 +74,7 @@ kerbrute userenum -d INLANEFREIGHT.LOCAL --dc 172.16.5.5 /usr/share/wordlists/ro
 ``` shell
 crackmapexec smb <IP> --users
 ```
+
 - **Output**: Displays user accounts along with `badpwdcount` and `baddpwdtime` to assess the risk of lockouts.
 ### Using rpcclient for Enumeration
 - **Establish a NULL Session**:
