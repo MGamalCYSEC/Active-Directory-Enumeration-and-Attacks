@@ -53,7 +53,7 @@ sudo apt remove docker-compose
 ```
 2. **Install the Docker Compose Plugin**: Download the plugin using the following commands:
 ``` bash
-sudo curl -L "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.35.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 3. **Make Docker Compose Executable**:
 ``` shell
