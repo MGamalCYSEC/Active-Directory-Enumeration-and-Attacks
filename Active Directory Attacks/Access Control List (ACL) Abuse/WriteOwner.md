@@ -5,6 +5,17 @@
 Abusing **WriteOwner** permissions allows you to take ownership of an Active Directory object. This can be leveraged to modify permissions, gain privileges, or escalate access.
 
 ---
+### Check user rights with powerview.ps1
+
+```powershell
+Invoke-ACLScanner -ResolveGUIDs | ? {$_.identityreferencename -like 'Target_user'}
+```
+- Out
+``` bash
+ObjectDN                : CN=Domain Admins,CN=Users,DC=object,DC=local
+AceQualifier            : AccessAllowed
+ActiveDirectoryRights   : WriteOwner
+```
 
 ### Workflow
 
