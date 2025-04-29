@@ -36,7 +36,7 @@ Set-ADAccountPassword (ActiveDirectory module)
 Set-ADAccountPassword -Identity 'CN=Elisa Daugherty,OU=Accounts,DC=Fabrikam,DC=com' `
     -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "p@ssw0rd" -Force)
 ```
-# Using rpc from owned user loggin
+# Using rpc from owned user login
 ```
 setuserinfo2 <target-user> 23 'P@ssword2022'
 ```
