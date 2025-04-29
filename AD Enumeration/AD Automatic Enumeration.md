@@ -65,3 +65,15 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo docker-compose pull
 sudo docker-compose up
 ```
+---
+---
+## From Kali-Linux Machine (Using [BloodHound.py](https://www.kali.org/tools/bloodhound.py/))
+
+Get data from target
+```
+sudo bloodhound-python -u <'user'> -p <'Password'> -ns $IP -d <Domain> -c all
+```
+in a single zip file
+```
+sudo bloodhound-python -u <'user'> -p <'Password'> -ns $IP -d <Domain> -c all --zip
+```
