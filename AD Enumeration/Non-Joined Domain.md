@@ -57,6 +57,10 @@ When scanning your target Domain Controller, focus on these ports to detect serv
 ``` shell
 kerbrute userenum -d INLANEFREIGHT.LOCAL --dc 172.16.5.5 /usr/share/wordlists/rockyou.txt -o valid_ad_users
 ```
+Or testing list you have
+``` shell
+kerbrute userenum --dc $IP -d htb.local -o forest.out users.lst
+```
 - **Note**: Look for outputs that indicate “No Pre-Authentication Required.”
     - **AS-REP Hash**: If found (e.g., `$krb5asrep$23$...`), this hash can be cracked offline to recover the plaintext password.
     - that's mean the user has **Kerberos pre-authentication disabled** (`DONT_REQ_PREAUTH` flag set in Active Directory). This misconfiguration allows attackers to request a Kerberos Ticket Granting Ticket (TGT) for the user **without knowing their password**.
