@@ -8,7 +8,7 @@ Import-Module .\Sharphound.ps1
 ```
 ##### Running SharpHound to collect domain data
 ``` powershell
-Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\temp\ -OutputPrefix "corp audit"
+Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\temp\ -OutputPrefix "corp_audit"
 ```
 #### CollectionMethods
 ![Pasted image](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Pasted%20image%2020241225121647.png)
