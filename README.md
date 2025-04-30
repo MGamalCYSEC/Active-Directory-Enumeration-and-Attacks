@@ -22,6 +22,7 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 2.5.4. [SPN Jacking](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/SPN%20Jacking.md)
   - 2.5.5. [GenericWrite AddMember in target group](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/GenericWrite.md)
   - 2.5.6. [Abusing **WriteOwner** permissions](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/WriteOwner.md)
+  - 2.5.7.[SeBackupPrivilege](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/SeBackupPrivilege.md) _whoami /priv_
 
 ---
 # 3. [Active Directory Lateral Movement](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/AD%20Lateral%20Movement)
