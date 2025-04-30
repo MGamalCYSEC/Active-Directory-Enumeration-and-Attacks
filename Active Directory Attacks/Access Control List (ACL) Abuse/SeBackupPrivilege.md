@@ -6,6 +6,13 @@ The `SeBackupPrivilege` allows users to bypass file and directory permissions to
 - Extracting NTLM hashes for offline cracking or Pass-the-Hash (PTH) attacks.
 - Circumventing NTFS file and directory permissions through the backup application interface.
 
+### First Chech if this privilege exist or not by 
+
+```powershell
+whoami /priv
+```
+![image](https://github.com/user-attachments/assets/e128fa19-af6f-4149-ab28-73932bc6bc76)
+
 ---
 
 ## Method 1: Backup Windows Registry and Extract Local NTLM Hashes
