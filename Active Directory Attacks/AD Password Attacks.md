@@ -21,6 +21,10 @@ Get-DomainPolicy
   ```bash
   crackmapexec smb <Domain_Controller_IP> -u <username> -p 'LegmanTeamBenzoin!!' --pass-pol
   ```
+- **enumerate user SIDs by brute-forcing RID values:**
+  ```shell
+  crackmapexec smb <Domain_Controller_IP> -u guest -p "" --rid-brute
+  ```
 
 #### Using `rpcclient` for Enumeration:
 - **Connect to RPC**:
