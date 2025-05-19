@@ -1,3 +1,11 @@
+# Remotely
+## Using Bloodhound.py
+
+#### Executing BloodHound.py
+``` shell
+sudo bloodhound-python -u 'forend' -p 'Klmcargo2' -ns 172.16.5.5 -d inlanefreight.local -c all
+```
+# Collect locally using SharpHound
 In order to use BloodHound, we need to start the [_Neo4j_](https://neo4j.com/) service, which is installed by default.# [SharpHound](https://support.bloodhoundenterprise.io/hc/en-us/articles/17481151861019-SharpHound-Community-Edition)
 Before you Download Sharphound version is so important as newest releases above version v1.1.0 compatible only with bloodhound 5
 So for bloodhound on kali dist we use [SharpHound v1.1.0](https://github.com/SpecterOps/SharpHound/releases/tag/v1.1.0) 
