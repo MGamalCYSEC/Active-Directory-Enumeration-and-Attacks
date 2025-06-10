@@ -27,7 +27,9 @@ certipy-ad find -u Jodie.Summers -p "hHO_S9gff7ehXw" -dc-ip 192.168.171.30 -stdo
 ![Pasted image 20250609231800](https://github.com/user-attachments/assets/28e835fd-7bde-4204-920c-fa91d945eae6)
 
 
-![[Pasted image 20250609231845.png]]We can clearly see the message indicating that ESC4 has dangerous permissions.
+![Pasted image 20250609231845](https://github.com/user-attachments/assets/99e4c88d-022e-4271-83a3-99d528b2dced)
+
+We can clearly see the message indicating that ESC4 has dangerous permissions.
 
 Now time to exploit and get the `administrator` hash since we have gotten the template name let request to receive a certificate.
 ```shell
