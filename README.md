@@ -32,6 +32,10 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
      - 2.6.9.3. [WriteDacl On Computers](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/WriteDacl%20On%20Computers.md)
      - 2.6.9.4. [WriteDacl On Domains](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/WriteDacl%20On%20Domains.md)
      - 2.6.9.5. [WriteDacl on Default Domain Policy](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/WriteDacl%20on%20Default%20Domain%20Policy.md)
+  - 2.6.10. [GenericAll](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/GenericAll.md)
+     - 2.6.10.1. [On a User A](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/ForceChangePassword.md)
+     - 2.6.10.2. [On a User Create fake SPN](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/SPN%20Jacking.md)
+     - 2.6.10.3. [On a Computer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/GenericAll%20permissions%20to%20the%20computer%20(RBCD).md)
 - 2.7. Bleeding Edge Vulnerabilities
   - 2.7.1. [NoPac (**SamAccountName** Spoofing)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/NoPac%20(SamAccountName%20Spoofing).md)
   - 2.7.1. [PrintNightmare](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/PrintNightmare.md)
