@@ -95,4 +95,4 @@ Kerberos Authentication, specific LDAP server:
 ```shell
 python gMSADumper.py -k -d domain.local -l dc01.domain.local
 ```
-
+### Machine [Heist](https://portal.offsec.com/labs/practice)
