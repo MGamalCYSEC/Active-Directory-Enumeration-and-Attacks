@@ -1,4 +1,4 @@
-###I have no access on Any machine on domain
+### I have no access on Any machine on domain
 **Key Points**
 - **AD Users** :We are trying to enumerate valid user accounts we can target for password spraying.
 - **AD Joined Computers** Key Computers include Domain Controllers, file servers, SQL servers, web servers, Exchange mail servers, database servers, etc.
