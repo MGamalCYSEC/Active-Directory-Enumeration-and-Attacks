@@ -1,3 +1,4 @@
+Suportive Usernames Lists [jsmith.txt](https://github.com/insidetrust/statistically-likely-usernames/blob/master/jsmith.txt) or [jsmith2.txt](https://github.com/insidetrust/statistically-likely-usernames/blob/master/jsmith2.txt)
  we can pull the domain password policy in several ways, depending on how the domain is configured and whether or not we have valid domain credentials.
  **NOTE**: The default password policy when a new domain is created is as follows, and there have been plenty of organizations that never changed this policy:
 Minimum password length:	7
