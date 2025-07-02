@@ -2,6 +2,8 @@
 This repository is dedicated to exploring Active Directory (AD) enumeration techniques and attack strategies for penetration testing and security assessments. It serves as a comprehensive resource for cybersecurity professionals
 # 0. Have No access to any domain user
 ## 0.1. [Initial Enumeration of the Domain](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Initial%20Enumeration%20of%20the%20Domain.md)
+  - 0.1.1. [Passive identification of any hosts in the network](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Passive_identification.md)
+  - 0.1.2. [Active identification of any hosts in the network](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Active_identification.md)
 ## 0.2. [Password Spraying](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying.md)
   - 0.2.1. [NULL Sessions to Pull User List](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/NULL%20Sessions.md#null-sessions-to-pull-user-list)
   - 0.2.2. [Generated GUIDs From Password Policy](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Policy%20Enum.md)
