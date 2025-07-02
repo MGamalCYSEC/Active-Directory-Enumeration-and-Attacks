@@ -3,7 +3,7 @@ Suportive Usernames Lists [jsmith.txt](https://github.com/insidetrust/statistica
 ### Using **enum4linux-ng** or **enum4linux**: 
 ```shell SMB NULL Sessions
 enum4linux-ng -P <target_IP> -oA <Out>
-enum4linux -U 172.16.5.5  | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]"
+enum4linux -U <target_IP>  | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]"
 ```
 ### Using **netexec** or **crackmapexec**:
 ``` shell
