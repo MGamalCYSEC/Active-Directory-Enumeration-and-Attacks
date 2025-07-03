@@ -29,7 +29,6 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
       - 1.2.4.5. 
   - 1.2.5. [kerbrute](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Kerbrute.md)
   - 1.2.6. [LLMNR & NBT-NS Primer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/LLMNR%20%26%20NBT-NS%20Primer.md) Using **responder** and **Inveigh**
-  - 1.2.6. PowerView
 
 ---
 # 2. Active Directory Attacks
