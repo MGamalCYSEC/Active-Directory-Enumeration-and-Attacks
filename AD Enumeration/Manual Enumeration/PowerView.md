@@ -114,7 +114,8 @@ The [Microsoft documentation](https://learn.microsoft.com/en-us/windows/win32/s
 Get-ObjectAcl -Identity stephanie
 ```
 we are primarily interested in those **highlighted**
-![[Pasted image 20241224120822.png]]
+![Pasted image 20241224120822](https://github.com/user-attachments/assets/6560a072-a667-4657-ba20-fd4545f3eba2)
+
 ``` powershell
 Get-ObjectAcl -Identity UserName | select ObjectSID,ActiveDirectoryRights,SecurityIdentifier
 ```
@@ -145,7 +146,8 @@ Or we can use
 Invoke-ShareFinder
 ```
 
-![[Pasted image 20241224143305.png]]
+![Pasted image 20241224143305](https://github.com/user-attachments/assets/ed627a2b-3b84-4077-b473-e9b5a3b0d783)
+
  [**SYSVOL**](https://social.technet.microsoft.com/wiki/contents/articles/24160.active-directory-back-to-basics-sysvol.aspx), as it may include files and folders that reside on the domain controller itself.
  ``` powershell
  ls \\dc1.corp.com\sysvol\corp.com\
@@ -154,12 +156,14 @@ Invoke-ShareFinder
 ``` powershell
 ls \\dc1.corp.com\sysvol\corp.com\Policies\
 ```
-![[Pasted image 20241224143757.png]]
+![Pasted image 20241224143757](https://github.com/user-attachments/assets/54a58560-494d-46c8-9ad3-843e0ae00bd4)
+
 Checking contents of old-policy-backup.xml file
 ``` powershell
 cat \\dc1.corp.com\sysvol\corp.com\Policies\oldpolicy\old-policy-backup.xml
 ```
-![[Pasted image 20241224144802.png]]
+![Pasted image 20241224144802](https://github.com/user-attachments/assets/24c1ee97-4bbc-4ad6-98b9-9490a1bf1b68)
+
 XML file describes an old policy (helpful for learning more about the current policies) and an encrypted password for the local built-in Administrator account. The encrypted password could be extremely valuable for us.
 system administrators often changed local workstation passwords through [_Group Policy Preferences_](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)) (GPP).
 However, even though GPP-stored passwords are encrypted with AES-256, the private key for the encryption has been posted on [_MSDN_](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gppref/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be?redirectedfrom=MSDN#endNote2). We can use this key to decrypt these encrypted passwords. In this case, we'll use the [**gpp-decrypt**](https://www.kali.org/tools/gpp-decrypt/) ruby script in Kali Linux that decrypts a given GPP encrypted string:
