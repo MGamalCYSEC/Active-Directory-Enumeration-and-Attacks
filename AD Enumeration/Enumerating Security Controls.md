@@ -32,3 +32,26 @@ Constrained Language Mode is a PowerShell language mode designed to restrict scr
 ```powershell
 $ExecutionContext.SessionState.LanguageMode
 ```
+**Types of PowerShell Language Modes**
+
+|Language Mode|Description|
+|---|---|
+|**FullLanguage**|Default for local admins. All PowerShell features are available.|
+|**ConstrainedLanguage**|Restricts .NET types, COM objects, reflection, and dynamic code. Used in locked-down environments.|
+|**RestrictedLanguage**|Very limited. Used in specific environments like the `Add-Type` compiler. Only allows basic expressions and operators.|
+|**NoLanguage**|No script execution allowed. Only predefined cmdlets/functions can be run (e.g., in some constrained environments).|
+
+## 🚫 **What is Blocked in Constrained Language Mode**
+
+|Feature|Allowed?|
+|---|---|
+|**Add-Type**|❌ Blocked|
+|**COM Objects (New-Object -ComObject)**|❌ Blocked|
+|**.NET Classes**|✅ Only safe ones; many are blocked|
+|**Reflection**|❌ Blocked|
+|**ScriptBlock.Invoke()**|❌ Blocked|
+|**Dynamic Code (e.g., `Invoke-Expression`)**|❌ Blocked|
+|**Custom types or methods**|❌ Blocked|
+|**Core Cmdlets and Aliases**|✅ Allowed|
+|**Simple arithmetic and logic**|✅ Allowed|
+
