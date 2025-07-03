@@ -4,6 +4,8 @@ Checking the Status of Defender with Get-MpComputerStatus
 ```powershell
 Get-MpComputerStatus
 ```
+---
+
 ## AppLocker
 It is common for organizations to block `cmd.exe` and `PowerShell.exe` and write access to certain directories, but this can all be bypassed. Organizations also often focus on blocking the PowerShell.exe executable, but forget about the other PowerShell executable locations such as `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe` or `PowerShell_ISE.exe`. 
 
@@ -26,6 +28,7 @@ The default paths to the executables for PowerShell and PowerShell ISE on releva
 | -------------------------------------- | ---------------------------------------------------------------- |
 | 32-bit (x86) Powershell ISE executable | `SystemRoot%\system32\WindowsPowerShell\v1.0\powershell_ise.exe` |
 
+---
 
 ## PowerShell Constrained Language Mode
 Constrained Language Mode is a PowerShell language mode designed to restrict script execution in environments with low trust (like when running as a non-admin, or in AppLocker/Device Guard-constrained systems).
@@ -55,3 +58,17 @@ $ExecutionContext.SessionState.LanguageMode
 |**Core Cmdlets and Aliases**|✅ Allowed|
 |**Simple arithmetic and logic**|✅ Allowed|
 
+---
+
+# LAPS [Local Administrator Password Solution](https://www.microsoft.com/en-us/download/details.aspx?id=46899)
+
+It used to randomize and rotate local administrator passwords on Windows hosts and prevent lateral movement. We can enumerate what domain users can read the LAPS password set for machines with LAPS installed and what machines do not have LAPS installed.
+The [LAPSToolkit](https://github.com/leoloobeek/LAPSToolkit) greatly facilitates this with several functions.
+```powershell
+. .\LAPSToolkit.ps1
+Find-LAPSDelegatedGroups
+```
+We can use the `Get-LAPSComputers` function to search for computers that have LAPS enabled when passwords expire, and even the randomized passwords in cleartext if our user has access.
+```powershell
+Get-LAPSComputers
+```
