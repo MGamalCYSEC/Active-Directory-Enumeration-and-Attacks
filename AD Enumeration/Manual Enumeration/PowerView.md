@@ -1,5 +1,8 @@
 # Using PowerView
 `PowerView.ps1` is a powerful PowerShell script included in the PowerSploit framework, designed for Active Directory enumeration and exploitation. Below is an overview of commonly used commands and examples for `PowerView.ps1`.
+
+This [table](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/PowerView_Table.md) below describes some of the most useful functions PowerView offers
+
 **Importing PowerView**
 ```powershell
 powershell -ep bypass
