@@ -1,4 +1,4 @@
-# ActiveDirectory PowerShell
+# ActiveDirectory PowerShell Module
 The [Get-Module](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-7.2) cmdlet, will list all available modules, their version, and potential commands for use.
 ``` powershell
 Get-Module
