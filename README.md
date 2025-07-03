@@ -16,14 +16,14 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 1.2.1. [Enumerating Security Controls](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Enumerating%20Security%20Controls.md) - From **Windows**
   - 1.2.2. [Credentialed less Domain Users Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/DomainUsers.md) -From Linux
   - 1.2.3. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20from%20linux.md) - From **Linux**
-    - [Using CrackMapExec](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-crackmapexec-now-netexec)
-    - [Using SMBMap](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-smbmap)
-    - [Using rpcclient](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-rpcclient)
-    - [Impacket Toolkit](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#impacket-toolkit)
-    - [Using Windapsearch](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-windapsearch-that-utilizing-ldap-queries)
+      - [Using CrackMapExec](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-crackmapexec-now-netexec)
+      - [Using SMBMap](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-smbmap)
+      - [Using rpcclient](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-rpcclient)
+      - [Impacket Toolkit](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#impacket-toolkit)
+      - [Using Windapsearch](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-windapsearch-that-utilizing-ldap-queries)
   - 1.2.4. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20-%20from%20Windows.md) - From **Windows**
-            - [Using PowerShell and dot_NET Classes](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Using%20PowerShell%20and%20dot_NET%20Classes.md)
-            - [ActiveDirectory PowerShell Module](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/ActiveDirectory%20PowerShell.md)
+      - [Using PowerShell and dot_NET Classes](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Using%20PowerShell%20and%20dot_NET%20Classes.md)
+      - [ActiveDirectory PowerShell Module](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/ActiveDirectory%20PowerShell.md)
             - 
   - 1.2.5. [kerbrute](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Kerbrute.md)
   - 1.2.6. [LLMNR & NBT-NS Primer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/LLMNR%20%26%20NBT-NS%20Primer.md) Using **responder** and **Inveigh**
