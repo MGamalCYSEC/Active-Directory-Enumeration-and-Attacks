@@ -56,7 +56,11 @@ In rpc **rid**: beside each user. A [Relative Identifier](https://docs.microsoft
 > enumdomusers
 ```
 ![image](https://github.com/user-attachments/assets/82b57b31-845f-4620-8b38-65395a61bd14)
-
+**Enumeration By RID**
+`queryuser RID`
+```shell
+queryuser 0x1f4
+```
 Extract Users Descriptions/Comments for extra informations with rpc
 [Script.sh](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Automation/Users_Description_Comment_RPC.sh)
 
@@ -65,11 +69,12 @@ Extract Users Descriptions/Comments for extra informations with rpc
 > enumdomgroups
 ```
 ![image](https://github.com/user-attachments/assets/e9d41d37-26da-4533-a438-05e8591858ed)
-### Enumeration By RID
-queryuser RID
+**Get group members**
+`querygroupmem RID`
 ```shell
-queryuser 0x1f4
+querygroupmem 0xff0
 ```
+
 ---
 
 ## Impacket Toolkit
