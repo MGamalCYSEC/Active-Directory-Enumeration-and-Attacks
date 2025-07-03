@@ -22,9 +22,11 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
       - 1.2.3.4. [Impacket Toolkit](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#impacket-toolkit)
       - 1.2.3.5. [Using Windapsearch](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-windapsearch-that-utilizing-ldap-queries)
   - 1.2.4. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20-%20from%20Windows.md) - From **Windows**
-      - [Using PowerShell and dot_NET Classes](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Using%20PowerShell%20and%20dot_NET%20Classes.md)
-      - [ActiveDirectory PowerShell Module](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/ActiveDirectory%20PowerShell.md)
-            - 
+      - 1.2.4.1. [Using PowerShell and dot_NET Classes](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Using%20PowerShell%20and%20dot_NET%20Classes.md)
+      - 1.2.4.2. [ActiveDirectory PowerShell Module](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/ActiveDirectory%20PowerShell.md)
+      - 1.2.4.3.
+      - 1.2.4.4.
+      - 1.2.4.5. 
   - 1.2.5. [kerbrute](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Kerbrute.md)
   - 1.2.6. [LLMNR & NBT-NS Primer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/LLMNR%20%26%20NBT-NS%20Primer.md) Using **responder** and **Inveigh**
   - 1.2.6. PowerView
