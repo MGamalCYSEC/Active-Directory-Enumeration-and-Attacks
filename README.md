@@ -1,4 +1,4 @@
-# Active-Directory-Enumeration-and-Attacks
+# 🗂️🌐🛡️ Active-Directory-Enumeration-and-Attacks
 This repository is dedicated to exploring Active Directory (AD) enumeration techniques and attack strategies for penetration testing and security assessments. It serves as a comprehensive resource for cybersecurity professionals
 # 0. Have No access to any domain user
 ## 0.1. [Initial Enumeration of the Domain](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Initial%20Enumeration%20of%20the%20Domain.md)
