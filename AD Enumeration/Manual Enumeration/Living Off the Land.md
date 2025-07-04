@@ -219,5 +219,11 @@ Let's break them down quickly:
 **Flags** values selected as following:
 ![Pasted image 20250202200443](https://github.com/user-attachments/assets/d7f20e57-7b25-4a5e-8a9a-0c6507bd88dd)
 
+**Example**:
+Find the description field of a **disabled account with administrative privileges**.
+```powershell
+dsquery * -filter "(&(objectCategory=user)(userAccountControl:1.2.840.113556.1.4.803:=2)(adminCount=1)(description=*))" -limit 5 -attr SAMAccountName description
+```
+[Breaking this down line-by-line](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Commanddsquery.md)
 ---
 
