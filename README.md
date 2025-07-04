@@ -8,20 +8,20 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 0.2.1. [NULL Sessions to Pull User List](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/NULL%20Sessions.md#null-sessions-to-pull-user-list)
   - 0.2.2. [Generated GUIDs From Password Policy](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Policy%20Enum.md)
   - 0.2.3. **Internal Password Spraying** (At this stage  we have created a wordlist)
-     - 0.2.3.1. [Internal Password Spraying From Linux](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying%20from%20Linux.md)
-     - 0.2.3.2. [Internal Password Spraying From Windows](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying%20from%20Windows.md) (Foothold on machine joint domain)
+     - 0.2.3.1. [Internal Password Spraying From Linux](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying%20from%20Linux.md) 🐧
+     - 0.2.3.2. [Internal Password Spraying From Windows](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying%20from%20Windows.md) 🖥️ (Foothold on machine joint domain)
 # 1. Enumerating Active Directory environment (Foothold) 
 ## 1.1. [Automatic Enumeration Using BloodHound](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/AD%20Automatic%20Enumeration.md)
 ## 1.2. Manual Enumeration
-  - 1.2.1. [Enumerating Security Controls](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Enumerating%20Security%20Controls.md) - From **Windows**
-  - 1.2.2. [Credentialed less Domain Users Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/DomainUsers.md) -From Linux
-  - 1.2.3. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20from%20linux.md) - From **Linux**
+  - 1.2.1. [Enumerating Security Controls](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Enumerating%20Security%20Controls.md) 🖥️ - From **Windows**
+  - 1.2.2. [Credentialed less Domain Users Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/DomainUsers.md) 🐧 -From Linux
+  - 1.2.3. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20from%20linux.md) 🐧 - From **Linux**
       - 1.2.3.1. [Using CrackMapExec](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-crackmapexec-now-netexec)
       - 1.2.3.2. [Using SMBMap](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-smbmap)
       - 1.2.3.3. [Using rpcclient](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-rpcclient)
       - 1.2.3.4. [Impacket Toolkit](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#impacket-toolkit)
       - 1.2.3.5. [Using Windapsearch](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration.md#using-windapsearch-that-utilizing-ldap-queries)
-  - 1.2.4. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20-%20from%20Windows.md) - From **Windows**
+  - 1.2.4. [Credentialed Enumeration](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Credentialed%20Enumeration%20-%20from%20Windows.md) 🖥️ - From **Windows**
       - 1.2.4.1. [Using PowerShell and dot_NET Classes](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Using%20PowerShell%20and%20dot_NET%20Classes.md)
       - 1.2.4.2. [ActiveDirectory PowerShell Module](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/ActiveDirectory%20PowerShell.md)
       - 1.2.4.3. [Using PowerView](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/PowerView.md)
@@ -70,5 +70,5 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
 - 3.3. [Pass the Ticket (PtT)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/Pass%20the%20Ticket.md)
 - 3.4. [Pass the Certificate (PFX)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/Pass%20the%20Certificate(PFX).md)
 - 3.5. [PsExec](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/PsExec.md)
-- 3.6. [WMI (Windows Management Instrumentation)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/WMI.md)
-- 3.7. [WinRM (Windows Remote Management)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/WinRM.md)
+- 3.6. [WMI (Windows Management Instrumentation)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/WMI.md) 🖥️
+- 3.7. [WinRM (Windows Remote Management)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/WinRM.md) 🖥️
