@@ -27,6 +27,15 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
       - 1.2.4.3. [Using PowerView](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/PowerView.md)
       - 1.2.4.4. [Using SharpView](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/SharpView.md)
       - 1.2.4.5. [Using Snaffler - enumerating Shares](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Snaffler.md)
+  - 1.2.3. [Living Off the Land](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md)
+      - 1.2.3.1. [Basic Enumeration Commands](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#basic-enumeration-commands)
+      - 1.2.3.2. [Using built-in modules in PowerShell](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#using-built-in-modules-in-powershell)
+      - 1.2.3.3. [Examining the PowerShell Event Log](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#examining-the-powershell-event-log)
+      - 1.2.3.4. [Checking Defenses](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#checking-defenses)
+      - 1.2.3.5. [Network Information](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#network-information)
+      - 1.2.3.6. [Windows Management Instrumentation (WMI)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#windows-management-instrumentation-wmi)
+      - 1.2.3.7. [Net Commands](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#net-commands)
+      - 1.2.3.8. [Dsquery](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#dsquery)
   - 1.2.5. [kerbrute](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Kerbrute.md)
   - 1.2.6. [LLMNR & NBT-NS Primer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/LLMNR%20%26%20NBT-NS%20Primer.md) Using **responder** and **Inveigh**
 
