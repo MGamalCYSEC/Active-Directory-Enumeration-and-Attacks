@@ -31,7 +31,7 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 1.2.6. [LLMNR & NBT-NS Primer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/LLMNR%20%26%20NBT-NS%20Primer.md) Using **responder** and **Inveigh**
 
 ---
-# 2. Active Directory Attacks
+# 2. ⚔️ Active Directory Attacks
 - 2.1. Cashed AD Credentials
 - 2.2. [AD Password Attacks](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/AD%20Password%20Attacks.md) **If You Got User Password Try It's Password For all List of Users May Be its a default Password**
 - 2.3. [AS-REP Roasting](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/AS-REP%20Roasting.md) **Try it First For List Of Users**
