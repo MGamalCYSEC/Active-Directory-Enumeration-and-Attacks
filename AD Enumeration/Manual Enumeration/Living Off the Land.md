@@ -213,20 +213,9 @@ dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=8192)" -limit 5 -
 **NOTE**: These strings are common LDAP queries that can be used with several different tools too `userAccountControl:1.2.840.113556.1.4.803:=8192`
 Let's break them down quickly:
 
-`userAccountControl:1.2.840.113556.1.4.803:` Specifies that we are looking at the [User Account Control (UAC) attributes](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties) for an object. This portion can change to include three different values we will explain below when searching for information in AD (also known as [Object Identifiers (OIDs)](https://ldap.com/ldap-oid-reference-guide/).  
+`userAccountControl:1.2.840.113556.1.4.803:=flag` Specifies that we are looking at the [User Account Control (UAC) attributes](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties) for an object. This portion can change to include three different values we will explain below when searching for information in AD (also known as [Object Identifiers (OIDs)](https://ldap.com/ldap-oid-reference-guide/).  
 `=8192` represents the decimal bitmask we want to match in this search. This decimal number corresponds to a corresponding UAC Attribute flag that determines if an attribute like `password is not required` or `account is locked` is set. These values can compound and make multiple different bit entries. Below is a quick list of potential values.
-We can get SID specifies what we are looking for from
-**1. PowerShell (ActiveDirectory Module)**
 
-> 💡 Make sure RSAT (Remote Server Administration Tools) is installed.
-
-```powershell
-# Find all disabled user accounts (flag = 2)
-Get-ADUser -Filter {userAccountControl -band 2} -Properties userAccountControl
-
-# Find accounts with "Password Never Expires" (flag = 65536)
-Get-ADUser -Filter {userAccountControl -band 65536} -Properties userAccountControl
-```
 flags values selected as following
 ![Pasted image 20250202200443](https://github.com/user-attachments/assets/d7f20e57-7b25-4a5e-8a9a-0c6507bd88dd)
 
