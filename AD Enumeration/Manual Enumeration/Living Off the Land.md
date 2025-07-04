@@ -225,5 +225,6 @@ Find the description field of a **disabled account with administrative privilege
 dsquery * -filter "(&(objectCategory=user)(userAccountControl:1.2.840.113556.1.4.803:=2)(adminCount=1)(description=*))" -limit 5 -attr SAMAccountName description
 ```
 [Breaking this down line-by-line](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Commanddsquery.md)
+
 ---
 
