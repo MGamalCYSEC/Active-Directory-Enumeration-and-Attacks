@@ -1,6 +1,6 @@
 # 🗂️🌐🛡️ Active-Directory-Enumeration-and-Attacks
 This repository is dedicated to exploring Active Directory (AD) enumeration techniques and attack strategies for penetration testing and security assessments. It serves as a comprehensive resource for cybersecurity professionals
-# 0. Have No access to any domain user
+# 💡 0. Have No access to any domain user
 ## 0.1. [Initial Enumeration of the Domain](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Initial%20Enumeration%20of%20the%20Domain.md)
   - 0.1.1. [Passive identification of any hosts in the network](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Passive_identification.md)
   - 0.1.2. [Active identification of any hosts in the network](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Active_identification.md)
@@ -10,7 +10,7 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 0.2.3. **Internal Password Spraying** (At this stage  we have created a wordlist)
      - 0.2.3.1. [Internal Password Spraying From Linux](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying%20from%20Linux.md) 🐧
      - 0.2.3.2. [Internal Password Spraying From Windows](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Password%20Spraying%20from%20Windows.md) 🖥️ (Foothold on machine joint domain)
-# 1. Enumerating Active Directory environment (Foothold) 
+# 🔍 1. Enumerating Active Directory environment (Foothold) 
 ## 1.1. [Automatic Enumeration Using BloodHound](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/AD%20Automatic%20Enumeration.md)
 ## 1.2. Manual Enumeration
   - 1.2.1. [Enumerating Security Controls](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Enumerating%20Security%20Controls.md) 🖥️ - From **Windows**
