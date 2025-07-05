@@ -37,7 +37,6 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
       - 1.2.3.7. [Net Commands](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#net-commands)
       - 1.2.3.8. [Dsquery](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#dsquery)
   - 1.2.6. [kerbrute](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Kerbrute.md)
-  - 1.2.7. [LLMNR & NBT-NS Primer](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/LLMNR%20%26%20NBT-NS%20Primer.md) Using **responder** and **Inveigh**
 
 ---
 # 2. ⚔️ Active Directory Attacks
