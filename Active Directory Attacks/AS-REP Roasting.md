@@ -1,5 +1,7 @@
 # AS-REP Roasting
 **Kerberos preauthentication** [1](https://learn.microsoft.com/en-us/archive/technet-wiki/23559.kerberos-pre-authentication-why-it-should-not-be-disabled) is the process where a client sends an encrypted _timestamp_ (AS-REQ) to the domain controller to prove its identity. If valid, the domain controller responds with a session key and Ticket Granting Ticket (AS-REP).
+![AD Herbros001](https://github.com/user-attachments/assets/956ed02a-0e79-4c96-bf2a-2402b1a060f9)
+
 ## **Perform AS-REP Roasting on Kali:**
 
 1. **Command Syntax**: Use the following command to request the **TGT** (Ticket Granting Ticket) and capture the AS-REP hashes:
