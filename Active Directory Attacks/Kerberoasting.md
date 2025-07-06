@@ -112,6 +112,8 @@ john hash.txt --wordlist=/path/to/wordlist.txt
 ``` shell
 hashcat -m 13100 hash.txt /usr/share/wordlists/rockyou.txt
 ```
+---
+
 ### Replay Tickets with Impacket
 ##### 1. Convert .kirbi to CCache
 ``` shell
