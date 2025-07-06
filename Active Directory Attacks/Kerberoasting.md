@@ -1,5 +1,9 @@
 # Kerberoasting
 This attack targets [Service Principal Names (SPN)](https://docs.microsoft.com/en-us/windows/win32/ad/service-principal-names) accounts. SPNs are unique identifiers that Kerberos uses to map a service instance to a service account in whose context the service is running. Domain accounts are often used to run services to overcome the network authentication limitations of built-in accounts such as `NT AUTHORITY\LOCAL SERVICE`.
+
+![AD Herbros002](https://github.com/user-attachments/assets/f7ed51a4-9646-4ccc-a4e7-f302842ce711)
+
+
 ## **Perform Kerberoasting on `Kali`:**
 
 **Command Syntax**: Use the following command to request the **TGS** (Ticket Granting Server) and capture the TGS-REP hash:
