@@ -4,7 +4,7 @@ This attack targets [Service Principal Names (SPN)](https://docs.microsoft.com/
 ![AD Herbros002](https://github.com/user-attachments/assets/f7ed51a4-9646-4ccc-a4e7-f302842ce711)
 
 
-## **Perform Kerberoasting on `Kali`:**
+## **Perform Kerberoasting using `Kali`:**
 
 **Command Syntax**: Use the following command to request the **TGS** (Ticket Granting Server) and capture the TGS-REP hash:
 #### Kerberoast without preauthentication   
