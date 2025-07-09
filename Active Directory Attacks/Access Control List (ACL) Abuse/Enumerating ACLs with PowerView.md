@@ -37,6 +37,11 @@ Example: Preform search on GUID value `00299570-246d-11d0-a768-00aa006e0529`  wh
 $guid= "00299570-246d-11d0-a768-00aa006e0529"
 Get-ADObject -SearchBase "CN=Extended-Rights,$((Get-ADRootDSE).ConfigurationNamingContext)" -Filter {ObjectClass -like 'ControlAccessRight'} -Properties * |Select Name,DisplayName,DistinguishedName,rightsGuid| ?{$_.rightsGuid -eq $guid} | fl
 ```
+### Get ObjectAceType of the <user> has over the  <Specific group>
+```powershell
+Convert-NameToSID -Name "username"
+Get-DomainObjectAcl -ResolveGUIDs -Identity "Specific group" | ? {$_.SecurityIdentifier -eq $sid}
+```
 
 ## Check what controls we have over UsersList with our user 
 1. Creating a List of Domain Users with PowerView
