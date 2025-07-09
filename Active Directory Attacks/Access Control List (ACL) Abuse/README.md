@@ -2,6 +2,8 @@ Access control lists are checked to determine permissions, These can be enumerat
 A graphic created by [Charlie Bromberg (Shutdown)](https://twitter.com/_nwodtuhs), shows an excellent breakdown of the varying possible ACE attacks and the tools to perform these attacks from both Windows and Linux (if applicable). 
 ![DACL abuse mindmap CnS4bNaY](https://github.com/user-attachments/assets/dd684644-35cb-4613-b9ce-d32aa48847d5)
 
+## [Enumerating ACLs with PowerView](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Access%20Control%20List%20(ACL)%20Abuse/Enumerating%20ACLs%20with%20PowerView.md)
+## [Enumerating ACLs with BloodHound](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/AD%20Automatic%20Enumeration.md)
 
 The following table should help for better understanding of the ACE types and what they allow.
 
