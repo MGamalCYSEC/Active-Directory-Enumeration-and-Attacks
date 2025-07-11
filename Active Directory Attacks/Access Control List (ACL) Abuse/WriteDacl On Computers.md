@@ -1,4 +1,4 @@
-#### **3. Computers: Gain Full Control Over a Computer Object**
+# **Computers: Gain Full Control Over a Computer Object**
 
 **Scenario:**  
 You have `WriteDACL` over a computer object. Use it to grant full control.
