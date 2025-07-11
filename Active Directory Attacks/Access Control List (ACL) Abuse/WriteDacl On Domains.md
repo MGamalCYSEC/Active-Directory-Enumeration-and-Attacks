@@ -1,4 +1,4 @@
-#### **4. Domains: Perform a DCSync Attack**
+# **Domains: Perform a DCSync Attack**
 
 **Scenario:**  
 You have `WriteDACL` on the domain object. Use it to grant yourself `DCSync` rights.
