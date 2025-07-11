@@ -1,4 +1,4 @@
-#### **1. Groups: Add a Member to a Group**
+# **Groups: Add a Member to a Group**
 
 **Scenario:**  
 You have `WriteDACL` over a group (e.g., "Domain Admins"). Use it to grant yourself the ability to add members.
