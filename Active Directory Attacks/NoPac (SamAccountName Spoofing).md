@@ -44,6 +44,5 @@ sudo python3 noPac.py DOMAIN/USERNAME:PASSWORD -dc-ip DC_IP -dc-host DC_HOSTNAME
 
 ### **Key Notes**
 
-1. **TGT Persistence**: The exploit saves the Ticket Granting Ticket (TGT) in the current directory on the attack host. This can be used for further exploitation.
-2. **Noise and Detection**: Using these exploits can generate significant activity, which may trigger antivirus (AV) or endpoint detection and response (EDR) systems.
-3. **Generic Input Placeholders**: Replace `DOMAIN`, `USERNAME`, `PASSWORD`, `DC_IP`, and `DC_HOSTNAME` with values specific to your target environment.
+Keep in mind with smbexec shells we will need to use exact paths instead of navigating the directory structure using cd.
+Use `dir path/to/navigate/it`
