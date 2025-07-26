@@ -77,7 +77,8 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 2.7.1. [PrintNightmare](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/PrintNightmare.md) ([CVE-2021-34527](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) and [CVE-2021-1675](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1675))
   - 2.7.2. [PetitPotam (MS-EFSRPC)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/PetitPotam%20(MS-EFSRPC).md) ([CVE-2021-36942](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942))
 - 2.8. Domain Trusts
-  - 2.8.1. 
+  - 2.8.1. [Enumerating Trust Relationships](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Domain%20Trusts%20Enum.md)
+  - 2.8.2. 
 - 2.9. Miscellaneous Misconfigurations
   - 2.9.1. [Exchange Related Group Membership](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Active%20Directory%20Attacks/Miscellaneous%20Misconfigurations)
 ---
