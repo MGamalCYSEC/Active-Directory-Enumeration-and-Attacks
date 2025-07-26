@@ -1,0 +1,17 @@
+# Introduction
+- Large organizations often create **domain trust relationships** to simplify access when acquiring other companies or integrating with external partners like Managed Service Providers (MSPs) or remote business units. This avoids the need to migrate users and resources, making integration faster. However, if not properly secured, these trusts can become a **security risk**—a vulnerable subdomain or trusted partner can provide attackers with a path into the main domain. Understanding and assessing these trust relationships is crucial, as they can be **abused through built-in mechanisms** during security testing.
+# Overview
+- A [trust](https://learn.microsoft.com/en-us/archive/technet-wiki/50969.active-directory-forest-trust-attention-points) is used to establish forest-forest or domain-domain (intra-domain) authentication, which allows users to access resources in (or perform administrative tasks) another domain, outside of the main domain where their account resides. 
+- A trust creates a link between the authentication systems of two domains and may allow either one-way or two-way (bidirectional) communication.
+## Types of trusts:
+* **Parent-child**: Domains in the same forest with two-way trust—users can access resources between parent and child domains media.domain.local could authenticate into the parent domain domain.local, and vice-versa.
+* **Cross-link**: Trust between child domains to make authentication faster.
+* **External**: One-way or two-way trust between separate forests, not transitive—uses SID filtering to control access.
+* **Tree-root**: Automatic two-way trust between the main forest root and a new tree root domain.
+* **Forest**: Trust between two different forest roots—fully transitive.
+* **[ESAE](https://learn.microsoft.com/en-us/security/privileged-access-workstations/esae-retirement)**: A separate, secure forest (also called a bastion forest) used to manage Active Directory securely.
+### **NOTES**: 
+- A **transitive** trust means that trust is extended to objects that the child domain trusts, Example: if Domain A has a trust with Domain B, and Domain B has a transitive trust with Domain C, then Domain A will automatically trust Domain C.
+- **Non-transitive** trust, the child domain itself is the only one trusted.
+- **One-way trust** Users in a trusted domain can access resources in a trusting domain, not vice-versa.
+- **Bidirectional trust** Users from both trusting domains can access resources in the other domain.
