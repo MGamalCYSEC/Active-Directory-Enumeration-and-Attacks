@@ -1,4 +1,6 @@
-<img width="496" height="45" alt="image" src="https://github.com/user-attachments/assets/9e8676d8-86b6-4c6a-8e30-0399740ee7f3" />To perform this attack from a **Linux attack host**, we  need to gather the following:
+# Attacking Domain Trusts From Linux
+## Preforming Manual Attack
+To perform this attack from a **Linux attack host**, we  need to gather the following:
 
 * The **KRBTGT hash** of the **child domain**
 * The **Security Identifier (SID)** of the **child domain**
