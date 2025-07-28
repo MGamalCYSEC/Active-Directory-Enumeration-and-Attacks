@@ -1,4 +1,4 @@
-# Attacking Domain Trusts From Linux
+# Attacking Domain Trusts From Linux 🐧
 ## Preforming Manual Attack
 To perform this attack from a **Linux attack host**, we  need to gather the following:
 
