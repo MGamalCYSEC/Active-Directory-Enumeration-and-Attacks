@@ -1,4 +1,4 @@
-# Internal Password Spraying - from Linux
+# Internal Password Spraying - from Linux 🐧
 Our creeated list name `valid_users.txt` if you don't have users list yet return back to [Pull User List](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/NULL%20Sessions.md#null-sessions-to-pull-user-list)
 ## Using a Bash one-liner for the Attack
 We will assume the password we wanna to spray it `Welcome`
