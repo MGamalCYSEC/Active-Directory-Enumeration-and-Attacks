@@ -1,4 +1,4 @@
-# Credentialed Enumeration - from Linux
+# Credentialed Enumeration - from Linux 🐧
 ## Using CrackMapExec (now NetExec)
 ### Domain User Enumeration
 ```powershell
