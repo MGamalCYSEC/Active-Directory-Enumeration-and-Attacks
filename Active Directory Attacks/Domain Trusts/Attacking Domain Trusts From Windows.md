@@ -1,4 +1,4 @@
-# Attacking Domain Trusts From Windows
+# Attacking Domain Trusts From Windows 🖥️
 ## SID History Primer
 The [sidHistory](https://docs.microsoft.com/en-us/windows/win32/adschema/a-sidhistory) attribute is used in migration scenarios. If a user in one domain is migrated to another domain, a new account is created in the second domain. The original user's SID will be added to the new user's SID history attribute, ensuring that the user can still access resources in the original domain.
 SID history is intended to work across domains, but can work in the same domain.
