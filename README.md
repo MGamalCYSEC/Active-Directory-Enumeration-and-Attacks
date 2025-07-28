@@ -46,8 +46,8 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   DONT_REQ_PREAUTH Appears from `Get-DomainUser -PreauthNotRequired` on powerview
 - 2.4. [Kerberoasting](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md) 
   - 2.4.1. [Overview](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md#kerberoasting)
-  - 2.4.2. [Using Kali](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md#perform-kerberoasting-using-kali)
-  - 2.4.3. [Using Windows (joined domain)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md#perform-kerberoasting-on-windows-joined-domain)
+  - 2.4.2. [Using Kali](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md#perform-kerberoasting-using-kali) 🐧
+  - 2.4.3. [Using Windows (joined domain)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md#perform-kerberoasting-on-windows-joined-domain) 🖥️
   - 2.4.3. [Replay Tickets with Impacket](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberoasting.md#replay-tickets-with-impacket)
   - 2.4.4. [Kerberos Double Hop Problem](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Kerberos%20Double%20Hop%20Problem.md)
 - 2.5. [AD Certificate Authority (pfx)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/AD%20Certificate%20Authority.md) 
