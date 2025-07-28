@@ -1,4 +1,4 @@
-# Enumerating Security Controls
+# Enumerating Security Controls 🖥️
 ## Windows Defender
 Checking the Status of Defender with Get-MpComputerStatus
 ```powershell
