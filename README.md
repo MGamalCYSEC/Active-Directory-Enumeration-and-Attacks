@@ -78,8 +78,10 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 2.7.2. [PetitPotam (MS-EFSRPC)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/PetitPotam%20(MS-EFSRPC).md) ([CVE-2021-36942](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36942))
 - 2.8. Domain Trusts
   - 2.8.1. [Enumerating Trust Relationships](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Domain%20Trusts%20Enum.md)
-  - 2.8.2. [Attacking Domain Trusts](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20From%20Windows.md) 🖥️ - From Windows
-  - 2.8.3. [Attacking Domain Trusts](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20From%20Linux.md) 🐧 - From Linux
+  - 2.8.2. [Attacking Domain Trusts - Child -> Parent Trusts](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20From%20Windows.md) 🖥️ - From Windows
+  - 2.8.3. [Attacking Domain Trusts - Child -> Parent Trusts](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20From%20Linux.md) 🐧 - From Linux
+  - 2.8.4. [Attacking Domain Trusts - Cross-Forest Trust Abuse]() 🖥️ - From Windows
+  - 2.8.5. [Attacking Domain Trusts - Cross-Forest Trust Abuse]() 🐧 - From Linux
 - 2.9. Miscellaneous Misconfigurations
   - 2.9.1. [Exchange Related Group Membership](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Active%20Directory%20Attacks/Miscellaneous%20Misconfigurations)
 ---
