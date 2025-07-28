@@ -25,3 +25,32 @@ Ouput Example:
 <img width="1485" height="831" alt="image" src="https://github.com/user-attachments/assets/096e98be-0717-4249-a2c2-ae6dd9b8732b" />
 
 The output indicates that our current domain, **Corp.com**, has two domain trusts. The first is with **LOGISTICS.Corp.com**, identified as a child domain due to the *IntraForest* (the trust is internal to the forest ) property—confirming we are in the forest root domain. The second trust is with **Dom.com**, and the *ForestTransitive* property being *True* suggests it's either a forest or external trust. Both trusts are **bidirectional**, allowing users to authenticate in both directions. This is a key detail during assessments—if cross-trust authentication isn't possible, we won’t be able to enumerate or launch attacks across the trusted domain.
+## Using PowerView
+
+```powershell
+Get-DomainTrust
+```
+perform a domain trust mapping and provide information such as the type of trust (parent/child, external, forest) and the direction of the trust (one-way or bidirectional).
+```powershell
+Get-DomainTrustMapping
+```
+## Checking Users in the Child Domain using Get-DomainUser
+```powershell
+Get-DomainUser -Domain LOGISTICS.CORP.LOCAL | select SamAccountName
+```
+## Using netdom 
+The netdom query sub-command of the netdom command-line tool in Windows can retrieve information about the domain, including a list of workstations, servers, and domain trusts.
+### To query domain trust
+```powershell
+netdom query /domain:CORP.local trust
+```
+### To query domain controllers
+```powershell
+netdom query /domain:CORP.local dc
+```
+### To query workstations and servers
+```powershell
+netdom query /domain:CORP.local workstation
+```
+## Visualizing Trust Relationships in BloodHound
+<img width="1912" height="583" alt="image" src="https://github.com/user-attachments/assets/b2f6b9f0-48b5-4f0a-911f-0b26ce5cd6c5" />
