@@ -1,4 +1,4 @@
-# Password Spraying from Windows
+# Password Spraying from Windows 🖥️
 From a foothold on a domain-joined Windows host, the [DomainPasswordSpray](https://github.com/dafthack/DomainPasswordSpray) tool is highly effective.
 ``` powershell
 Import-Module .\DomainPasswordSpray.ps1
