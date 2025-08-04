@@ -81,7 +81,7 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
   - 2.8.2. [Attacking Domain Trusts - Child -> Parent Trusts](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20From%20Windows.md) 🖥️ - From Windows
   - 2.8.3. [Attacking Domain Trusts - Child -> Parent Trusts](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20From%20Linux.md) 🐧 - From Linux
   - 2.8.4. [Attacking Domain Trusts - Cross-Forest Trust Abuse](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20-%20Cross-Forest%20-%20Windows.md) 🖥️ - From Windows
-  - 2.8.5. [Attacking Domain Trusts - Cross-Forest Trust Abuse]() 🐧 - From Linux
+  - 2.8.5. [Attacking Domain Trusts - Cross-Forest Trust Abuse](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Domain%20Trusts/Attacking%20Domain%20Trusts%20-%20Cross-Forest%20-%20Linux.md) 🐧 - From Linux
 - 2.9. Miscellaneous Misconfigurations
   - 2.9.1. [Exchange Related Group Membership](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/tree/main/Active%20Directory%20Attacks/Miscellaneous%20Misconfigurations)
 ---
