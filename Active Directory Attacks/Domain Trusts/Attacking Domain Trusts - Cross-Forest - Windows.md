@@ -55,10 +55,19 @@ sudo hashcat -m 13100 hash.hash /usr/share/wordlists/rockyou.txt
 * If a **Domain A admin** is added to the **Administrators group in Domain B**, and you compromise that admin in Domain A—you now have **admin access in Domain B**.
 
 
-#### 🔍 **Enumeration Tip:**
+#### 🔍 **Real Example:**
 
 * Use PowerView’s `Get-DomainForeignGroupMember` to find **foreign users** in groups.
 
-  * This helps spot users from **Domain A in Domain B groups**.
-  * Example: Enumerate users from `DOM.LOCAL` (a trusted domain).
+```powershell
+Get-DomainForeignGroupMember -Domain DOM.LOCAL
+Convert-SidToName <SID>
+```
+<img width="2023" height="556" alt="image" src="https://github.com/user-attachments/assets/399423dc-a805-447a-baea-20624d48f7cc" />
+Output shows that the built-in Administrators group in DOM.LOCAL has the built-in Administrator account for the CORP.LOCAL domain as a member. We can verify this access using the Enter-PSSession cmdlet to connect over WinRM.
 
+* Accessing DC03 Using Enter-PSSession
+
+```powershell
+Enter-PSSession -ComputerName DC03.DOM.LOCAL -Credential CORP\administrator
+```
