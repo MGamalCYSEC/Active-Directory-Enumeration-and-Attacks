@@ -71,3 +71,40 @@ Output shows that the built-in Administrators group in DOM.LOCAL has the built-i
 ```powershell
 Enter-PSSession -ComputerName DC03.DOM.LOCAL -Credential CORP\administrator
 ```
+---
+
+## SID History Abuse - Cross Forest
+
+Here’s a simplified and organized version of the explanation about **SID History abuse across forest trusts**:
+
+---
+
+### 🆔 **SID History Abuse Across Forest Trusts**
+
+#### 🧠 What is SID History?
+
+* When a user is **migrated from one domain or forest to another**, their old **SID (Security Identifier)** can be stored in the `SIDHistory` attribute of the new account.
+* This allows the user to **retain access** to resources that rely on their **old permissions**.
+
+
+#### 🚨 **Abuse Scenario (Cross-Forest)**
+
+* In a **forest trust** setup, if **SID filtering** is **not enabled**, attackers can **manually insert SIDs** into the `SIDHistory` attribute.
+* This means you can **add the SID of an admin account from Forest A** into the `SIDHistory` of a user in Forest B.
+* When the user authenticates across the trust, their token includes that **admin SID**, granting them **privileges in the other forest**.
+
+#### 🔍 **Example Scenario:**
+
+* A user `jjones` is migrated from `DOM.LOCAL` (Forest A) to `CORP.LOCAL` (Forest B).
+* If:
+
+  * `SID filtering` is **disabled**, and
+  * `jjones` had **admin rights** (or useful access) in Forest A,
+* Then:
+
+  * The `jjones` account in `CORP.LOCAL` can still **access and control** resources in `DOM.LOCAL` using their **old SID**.
+
+#### 🔒 **Mitigation:**
+
+* **Enable SID Filtering** on forest trusts to block foreign SIDs in access tokens.
+* This helps prevent privilege escalation via `SIDHistory`.
