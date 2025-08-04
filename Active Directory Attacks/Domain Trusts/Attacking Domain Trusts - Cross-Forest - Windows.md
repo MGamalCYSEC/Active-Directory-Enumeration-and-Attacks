@@ -26,3 +26,39 @@ Copy the Hash on Kali-Machine
 sudo hashcat -m 13100 hash.hash /usr/share/wordlists/rockyou.txt
 ```
 
+---
+
+## **Admin Password Reuse & Cross-Forest Group Membership**
+
+#### 🔁 **Password Reuse Between Trusted Domains**
+
+* In environments with **bidirectional forest trusts**, both forests might be managed by the same company and admins.
+* If you compromise **Domain A** and obtain the **NT hash or cleartext password** of:
+
+  * The **built-in Administrator**, or
+  * A user in **Domain Admins** or **Enterprise Admins**,
+    …check if **Domain B** has a similarly named account with **the same password**.
+
+✅ **Why?** Because admins sometimes reuse passwords across domains.
+
+**Example:**
+
+* Domain A has `adm_bob.smith` in Domain Admins.
+* Domain B has `bsmith_admin`.
+* If both accounts share the same password, taking over Domain A could give **full admin access to Domain B**.
+
+
+#### 👥 **Cross-Forest Group Membership**
+
+* In **bidirectional forest trusts**, admins from one domain can be members of groups in another.
+* **Domain Local Groups** (in Domain B) can include **users from Domain A**.
+* If a **Domain A admin** is added to the **Administrators group in Domain B**, and you compromise that admin in Domain A—you now have **admin access in Domain B**.
+
+
+#### 🔍 **Enumeration Tip:**
+
+* Use PowerView’s `Get-DomainForeignGroupMember` to find **foreign users** in groups.
+
+  * This helps spot users from **Domain A in Domain B groups**.
+  * Example: Enumerate users from `DOM.LOCAL` (a trusted domain).
+
