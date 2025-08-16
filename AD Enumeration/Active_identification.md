@@ -21,8 +21,13 @@ kerbrute userenum -d domain.local --dc 172.16.5.5 jsmith.txt
 Link-Local Multicast Name Resolution (LLMNR) and NetBIOS Name Service (NBT-NS) are Microsoft Windows components that serve as alternate methods of host identification that can be used when DNS fails.
 The point here is that when LLMNR/NBT-NS are used for name resolution, ANY host on the network can reply. This is where we come in with Responder to poison these requests. By this we can capture the NetNTLM hash and subject it to an offline brute force attack in an attempt to retrieve the cleartext password.
 ## LLMNR/NBT-NS Poisoning - from Linux
+Passive analysis mode (only sniffs/alerts, no poisoning).
 ```shell
 sudo responder -I <interface> -A
+```
+Active attack mode (performs poisoning + captures hashes).
+```shell
+sudo responder -I <interface> -wrfv
 ```
 log file per host located in the `/usr/share/responder/logs`
 #### Cracking an NTLMv2 Hash With Hashcat
