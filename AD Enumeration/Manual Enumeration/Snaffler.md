@@ -1,4 +1,4 @@
-# Using Snaffler - enumerating Shares
+# Using [Snaffler](https://github.com/SnaffCon/Snaffler) - enumerating Shares
 To execute Snaffler, we can use the command below:
 ``` powershell
 .\Snaffler.exe -s -d Domain.local -o snaffler.log -v data
