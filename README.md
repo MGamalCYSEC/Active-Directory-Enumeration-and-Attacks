@@ -97,3 +97,4 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
 ---
 # 4. Miscellaneous
 - 4.1. [RunAs](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Miscellaneous/RunAs.md)
+- 5.1. [Connect to the MSSQL database Server](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Miscellaneous/MSSQLClient.md)
