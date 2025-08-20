@@ -28,6 +28,7 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
       - 1.2.4.3. [Using PowerView](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/PowerView.md)
       - 1.2.4.4. [Using SharpView](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/SharpView.md)
       - 1.2.4.5. [Using Snaffler - enumerating Shares](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Snaffler.md)
+      - 1.2.4.6. [LLMNR/NBT-NS Poisoning](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/LLMNR/NBT-NS%20Poisoning.md)
   - 1.2.5. [Living Off the Land](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md)
       - 1.2.3.1. [Basic Enumeration Commands](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#basic-enumeration-commands)
       - 1.2.3.2. [Using built-in modules in PowerShell](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/Manual%20Enumeration/Living%20Off%20the%20Land.md#using-built-in-modules-in-powershell)
