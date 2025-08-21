@@ -97,5 +97,5 @@ This repository is dedicated to exploring Active Directory (AD) enumeration tech
 - 3.7. [WinRM (Windows Remote Management)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Lateral%20Movement/WinRM.md) 🖥️
 ---
 # 4. Miscellaneous
-- 4.1. [RunAs](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Miscellaneous/RunAs.md)
+- 4.1. [RunAs (Run specific processes with different permissions than the user's current logon )](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Active%20Directory%20Attacks/Miscellaneous/RunAs.md)
 - 5.1. [Connect to the MSSQL database Server](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/Miscellaneous/MSSQLClient.md)
