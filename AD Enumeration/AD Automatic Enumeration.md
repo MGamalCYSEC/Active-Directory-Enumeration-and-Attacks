@@ -3,7 +3,7 @@
 
 #### Executing BloodHound.py
 ``` shell
-sudo bloodhound-python -u 'forend' -p 'Klmcargo2' -ns 172.16.5.5 -d inlanefreight.local -c all
+sudo bloodhound-python -u 'forend' -p 'Klmcargo2' -ns 172.16.5.5 -d Corp.local -c all
 ```
 # Collect locally using SharpHound
 In order to use BloodHound, we need to start the [_Neo4j_](https://neo4j.com/) service, which is installed by default.# [SharpHound](https://support.bloodhoundenterprise.io/hc/en-us/articles/17481151861019-SharpHound-Community-Edition)
@@ -26,7 +26,7 @@ SharpHound.exe --CollectionMethods Session --Loop
 ```
 - As a zip file
 ``` powershell
-.\SharpHound.exe -c All --zipfilename ILFREIGHT
+.\SharpHound.exe -c All --zipfilename Corp
 ```
 ## Analysing Data using **BloodHound**
 `On kali linux`
