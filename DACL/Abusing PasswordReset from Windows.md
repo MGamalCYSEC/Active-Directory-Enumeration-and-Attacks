@@ -3,12 +3,14 @@
 ```powershell
 Set-DomainUserPassword -Identity <TARGET-USER> -AccountPassword $((ConvertTo-SecureString 'Newpassword1' -AsPlainText -Force)) -Verbose
 ```
-![[Pasted image 20251229171206.png]]
+<img width="1838" height="78" alt="Pasted image 20251229171206" src="https://github.com/user-attachments/assets/d7941650-deaf-45ed-9c5f-9d5097e8aa94" />
+
 #### Password Reset with **Active Directory Module**:
 ```powershell
 Set-ADAccountPassword <TARGET-USER> -NewPassword $((ConvertTo-SecureString 'Newpassword1' -AsPlainText -Force)) -Reset -Verbose
 ```
-![[Pasted image 20251229172124.png]]
+<img width="1835" height="80" alt="Pasted image 20251229172124" src="https://github.com/user-attachments/assets/5de32df6-f1ca-4c31-9801-6962413bd90d" />
+
 
 ---
 
