@@ -1,4 +1,4 @@
-Back to [[Active Directory - Enumeration (Bloodhound)]] to use `BloodHound` on target machine
+Back to [Active Directory - Enumeration (Bloodhound)](https://github.com/MGamalCYSEC/Active-Directory-Enumeration-and-Attacks/blob/main/AD%20Enumeration/AD%20Automatic%20Enumeration.md) to use `BloodHound` on target machine
 ## Queries 
 #### Search for `USER`, and whether he has **ForceChangePassword**, **GenericAll** or **AllExtendedRights** over any account:
 ```cypher
