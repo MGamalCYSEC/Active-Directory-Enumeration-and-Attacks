@@ -20,7 +20,7 @@ impacket-dacledit -principal <UserX> -target-dn dc=<domain>,dc=local -dc-ip 10.1
 
 <img width="1853" height="241" alt="Pasted image 20251230121849" src="https://github.com/user-attachments/assets/921e4493-25c0-4f18-b8e5-1e68dacc4d1d" />
 
-##### As we can see in the above output, `Pedro`, has **Self-Membership** over the target group `Backup Operators`; this means that `Pedro` can add himself to the group, but `Pedro` cannot add any other user.
+##### ✅ As we can see in the above output, `Pedro`, has **Self-Membership** over the target group `Backup Operators`; this means that `Pedro` can add himself to the group, but `Pedro` cannot add any other user.
 
 <img width="1900" height="508" alt="Pasted image 20251226233506" src="https://github.com/user-attachments/assets/1b210d5f-64a1-4a01-b0b6-9e2c5db4465d" />
 
