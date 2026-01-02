@@ -5,7 +5,7 @@ PowerShell itself does **not magically impersonate** unless you **start it with 
 ```powershell
 runas /netonly /user:DOMAIN\<USER> powershell.exe
 ```
-![[Pasted image 20260102085641.png]]
+<img width="1614" height="77" alt="Pasted image 20260102085641" src="https://github.com/user-attachments/assets/8dfe54bb-eead-4e7f-bd71-d0ad09797e9f" />
 - Opens a **new PowerShell window**
 ### overpass-the-hash of Jose's NTLM hash to forge a valid TGT Kerberos ticket:
 #### we can get any password `NT_HASH` by following
