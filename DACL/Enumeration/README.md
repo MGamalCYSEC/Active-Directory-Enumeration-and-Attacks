@@ -3,5 +3,5 @@
 We will perform **DACL (Discretionary Access Control List) enumeration** across the following environments:
 
 * 🩸 **BloodHound**
-* 🪟 **Windows** 
+* 🪟 **Windows** (Domain-Joined Machine)
 * 🐧 **Linux** 
