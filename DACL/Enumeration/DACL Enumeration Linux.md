@@ -6,7 +6,8 @@ impacket-dacledit -principal <UserX> -target <TARGET-USER> -dc-ip <DOMAIN-IP> DO
 ```
 ##### Examples
 **WriteProperty** or **Validated-SPN** over the target account.
-![[Pasted image 20251226114456.png]]
+
+<img width="2420" height="519" alt="Pasted image 20251226114456" src="https://github.com/user-attachments/assets/812de2ee-5a53-4c1d-8695-ffb6710a9e8c" />
 ##### Querying UserX's DACL over the Domain
 ```shell
 impacket-dacledit -principal <UserX> -target-dn dc=<domain>,dc=local -dc-ip 10.129.205.81 domain.local/<UserX>:<PASSWORD>
